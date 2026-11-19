@@ -1,0 +1,112 @@
+:root {
+  --portfolio-ease: cubic-bezier(.22, 1, .36, 1);
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  scroll-padding-top: 148px;
+}
+html.lenis { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+/* The captured eight-layer fixed blur paints bands across the page below it. */
+.framer-7qmm0i-container,
+[data-framer-name="Blur Gradient (Bottom)"] { display: none !important; }
+.framer-zZ2n7 .framer-k2jkju {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  isolation: isolate;
+  will-change: auto !important;
+}
+#portfolio-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 26px;
+  margin: 0;
+  color: var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #fff);
+  background: var(--token-62d5ebd4-5867-40fc-ba4d-ed46a167a079, #000);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 360ms var(--portfolio-ease), visibility 360ms;
+  font-family: PortfolioHeader, "Open Sauce Sans", Arial, sans-serif;
+}
+html[data-page-loading] #portfolio-loader { opacity: 1; visibility: visible; }
+.portfolio-loader-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -.07em;
+}
+.portfolio-loader-mark::before, .portfolio-loader-mark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid currentColor;
+  border-radius: 27px;
+  opacity: .18;
+}
+.portfolio-loader-mark::after {
+  border-color: currentColor transparent;
+  opacity: .8;
+  animation: portfolio-loader-orbit 2.4s linear infinite;
+}
+.portfolio-loader-caption {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .22em;
+}
+.portfolio-loader-caption span:last-child { opacity: .45; font-size: 9px; }
+.portfolio-loader-track {
+  width: 100px;
+  height: 2px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: color-mix(in srgb, currentColor 12%, transparent);
+}
+.portfolio-loader-track::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 100%;
+  background: currentColor;
+  animation: portfolio-loader-track 1.2s var(--portfolio-ease) infinite;
+}
+/* Cross-fade without scroll locking or translating the page-sized paint layer. */
+html[data-page-loading] main { opacity: 0 !important; }
+html[data-page-ready] main { transition: opacity 360ms var(--portfolio-ease); }
+html[data-page-leaving] main { pointer-events: none; }
+[data-motion-pending] { opacity: 0 !important; }
+/* Shared scroll text keeps the original semantic copy available to assistive technology. */
+.scroll-text-accessible { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.scroll-text-word { display: inline-block; white-space: nowrap; }
+.scroll-title-character { display: inline-block; }
+#about-title .scroll-text-visual,
+.case-hero h1 .scroll-text-visual { display: block; overflow: clip; padding-bottom: .12em; margin-bottom: -.12em; }
+html[data-page-ready] #portfolio-loader *,
+html[data-page-ready] #portfolio-loader ::before,
+html[data-page-ready] #portfolio-loader ::after { animation-play-state: paused; }
+@keyframes portfolio-loader-orbit { to { transform: rotate(360deg); } }
+@keyframes portfolio-loader-track {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(350%); }
+}
+@media (max-width: 699px) { :root { scroll-padding-top: 124px; } }
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto !important; }
+  #portfolio-loader, html[data-page-ready] main { transition: none; }
+  #portfolio-loader *, #portfolio-loader ::before, #portfolio-loader ::after,
+  .skills-header, .skills-intro, .skills-grid > *, .skills-footer { animation: none !important; }
+  [data-motion-pending] { opacity: 1 !important; }
+  .scroll-text-character { opacity: 1 !important; }
+}

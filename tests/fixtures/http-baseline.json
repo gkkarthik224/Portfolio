@@ -1,0 +1,212 @@
+{
+  "/": {
+    "status": 200,
+    "sha256": "2a455339b1ddf83186278abe5d0d5387a2f32063d746712b26b587c3160d7ab1",
+    "type": "text/html"
+  },
+  "/about": {
+    "status": 200,
+    "sha256": "8bdb0630e6abb69be9feead369de9e943dfd1ebe3527971bf966a58348467919",
+    "type": "text/html"
+  },
+  "/portfolio": {
+    "status": 200,
+    "sha256": "d95c94d8121e0070411b7e2ab206e194fd4d3e631d0aee2280020a1beb5dbc3e",
+    "type": "text/html"
+  },
+  "/contact": {
+    "status": 200,
+    "sha256": "8f72adfa15195fb491328f992f99672a663b5c28e045b59e00a6bd08e273f13a",
+    "type": "text/html"
+  },
+  "/skills": {
+    "status": 200,
+    "sha256": "cd664bebfdd7cf21d4cf98860c51ea9a677d5312c015a231110129e4d3345be1",
+    "type": "text/html"
+  },
+  "/portfolio/travel-easy": {
+    "status": 200,
+    "sha256": "8ff72fb648205ce13af4f8a7109781cc0b09dad8e98fe63ff66131723b99ba66",
+    "type": "text/html"
+  },
+  "/about-click.html": {
+    "status": 200,
+    "sha256": "8bdb0630e6abb69be9feead369de9e943dfd1ebe3527971bf966a58348467919",
+    "type": "text/html"
+  },
+  "/about-loaded.html": {
+    "status": 200,
+    "sha256": "8bdb0630e6abb69be9feead369de9e943dfd1ebe3527971bf966a58348467919",
+    "type": "text/html"
+  },
+  "/budget-selected.html": {
+    "status": 200,
+    "sha256": "8f72adfa15195fb491328f992f99672a663b5c28e045b59e00a6bd08e273f13a",
+    "type": "text/html"
+  },
+  "/contact-loaded.html": {
+    "status": 200,
+    "sha256": "8f72adfa15195fb491328f992f99672a663b5c28e045b59e00a6bd08e273f13a",
+    "type": "text/html"
+  },
+  "/contact.html": {
+    "status": 200,
+    "sha256": "8f72adfa15195fb491328f992f99672a663b5c28e045b59e00a6bd08e273f13a",
+    "type": "text/html"
+  },
+  "/dot-cursor.js": {
+    "status": 200,
+    "sha256": "7fa1c7865545ca61ea2166eeedd46765471ce71de13330542d5f2e55e29fcaf1",
+    "type": "text/javascript"
+  },
+  "/home-settled.html": {
+    "status": 200,
+    "sha256": "2a455339b1ddf83186278abe5d0d5387a2f32063d746712b26b587c3160d7ab1",
+    "type": "text/html"
+  },
+  "/local-customizations.css": {
+    "status": 200,
+    "sha256": "8c52349a7582047876b1cc94215726bacc9db0cde8c8a890264f199ad7149af7",
+    "type": "text/css"
+  },
+  "/mobile-contact.html": {
+    "status": 200,
+    "sha256": "8f72adfa15195fb491328f992f99672a663b5c28e045b59e00a6bd08e273f13a",
+    "type": "text/html"
+  },
+  "/mobile-home.html": {
+    "status": 200,
+    "sha256": "2a455339b1ddf83186278abe5d0d5387a2f32063d746712b26b587c3160d7ab1",
+    "type": "text/html"
+  },
+  "/page-transitions.js": {
+    "status": 200,
+    "sha256": "a85828b44948d2d68076650ba6c571f0ad099958af7dd968b39d99376d33f05e",
+    "type": "text/javascript"
+  },
+  "/portfolio-loaded.html": {
+    "status": 200,
+    "sha256": "d95c94d8121e0070411b7e2ab206e194fd4d3e631d0aee2280020a1beb5dbc3e",
+    "type": "text/html"
+  },
+  "/portfolio.html": {
+    "status": 200,
+    "sha256": "d95c94d8121e0070411b7e2ab206e194fd4d3e631d0aee2280020a1beb5dbc3e",
+    "type": "text/html"
+  },
+  "/portrait-custom.jpg": {
+    "status": 200,
+    "sha256": "587cd6cf5c7d2f39d55bfeb2ca5924d78766fbb812f3e0ab3b7d5653c7525c48",
+    "type": "image/jpeg"
+  },
+  "/portrait-transparent.png": {
+    "status": 200,
+    "sha256": "2b5b524a51a42cb2f7b6dd8b59f582db4d0d01264e0fcc8688aed1b2e8c8d1a2",
+    "type": "image/png"
+  },
+  "/portrait.jpg": {
+    "status": 200,
+    "sha256": "587cd6cf5c7d2f39d55bfeb2ca5924d78766fbb812f3e0ab3b7d5653c7525c48",
+    "type": "image/jpeg"
+  },
+  "/project-detail.html": {
+    "status": 200,
+    "sha256": "8ff72fb648205ce13af4f8a7109781cc0b09dad8e98fe63ff66131723b99ba66",
+    "type": "text/html"
+  },
+  "/project-loaded.html": {
+    "status": 200,
+    "sha256": "8ff72fb648205ce13af4f8a7109781cc0b09dad8e98fe63ff66131723b99ba66",
+    "type": "text/html"
+  },
+  "/scenario_start.html": {
+    "status": 200,
+    "sha256": "2a455339b1ddf83186278abe5d0d5387a2f32063d746712b26b587c3160d7ab1",
+    "type": "text/html"
+  },
+  "/service-selected.html": {
+    "status": 200,
+    "sha256": "8f72adfa15195fb491328f992f99672a663b5c28e045b59e00a6bd08e273f13a",
+    "type": "text/html"
+  },
+  "/skills-entrance.css": {
+    "status": 200,
+    "sha256": "dbefba121e3689f4c488d498a2b7d348126672a40902c0981550f314425c079e",
+    "type": "text/css"
+  },
+  "/skills-navigation.js": {
+    "status": 200,
+    "sha256": "fc3bcde87130a836891924f6adced6157af85019a116a139c9f3af226a305823",
+    "type": "text/javascript"
+  },
+  "/skills-page.js": {
+    "status": 200,
+    "sha256": "7add346c296e6fe988773abc98fec5e9857a802bb593c8ab6450c32def5d5caf",
+    "type": "text/javascript"
+  },
+  "/skills.css": {
+    "status": 200,
+    "sha256": "74f7ed9805344be96bfe71c2ce048626c307bcb67b1538c55e533ac963925d8e",
+    "type": "text/css"
+  },
+  "/skills.html": {
+    "status": 200,
+    "sha256": "cd664bebfdd7cf21d4cf98860c51ea9a677d5312c015a231110129e4d3345be1",
+    "type": "text/html"
+  },
+  "/theme-sync.js": {
+    "status": 200,
+    "sha256": "44574a243b08b6a5ddb2c90adbf3682721b29662422efe801e5d401b36c3b3d2",
+    "type": "text/javascript"
+  },
+  "/before-portrait-replacement/about-click.html": {
+    "status": 200,
+    "sha256": "8bdb0630e6abb69be9feead369de9e943dfd1ebe3527971bf966a58348467919",
+    "type": "text/html"
+  },
+  "/before-portrait-replacement/about-loaded.html": {
+    "status": 200,
+    "sha256": "8bdb0630e6abb69be9feead369de9e943dfd1ebe3527971bf966a58348467919",
+    "type": "text/html"
+  },
+  "/before-portrait-replacement/mobile-home.html": {
+    "status": 200,
+    "sha256": "2a455339b1ddf83186278abe5d0d5387a2f32063d746712b26b587c3160d7ab1",
+    "type": "text/html"
+  },
+  "/before-portrait-replacement/scenario_start.html": {
+    "status": 200,
+    "sha256": "2a455339b1ddf83186278abe5d0d5387a2f32063d746712b26b587c3160d7ab1",
+    "type": "text/html"
+  },
+  "/project-images/ai-test-scripts.png": {
+    "status": 200,
+    "sha256": "45905089b4332c69db5a9b898095dade673d1161193fc78ed82761d370cba577",
+    "type": "image/png"
+  },
+  "/project-images/auto-defect-management.png": {
+    "status": 200,
+    "sha256": "aba00ab211fed7551111fe4f37e03565b070b5ed2b5f5aba68f93ad8c48976cc",
+    "type": "image/png"
+  },
+  "/project-images/frp-material-strength.png": {
+    "status": 200,
+    "sha256": "d1d19a29521ef7b97d5b820551634ec4288cc3672e2889fba6798574346a9ce6",
+    "type": "image/png"
+  },
+  "/project-images/procurement-erp.png": {
+    "status": 200,
+    "sha256": "6ee1818d122612233feed8dc81bfb083fd3f605fa27d2e38dd2601b6ae37e735",
+    "type": "image/png"
+  },
+  "/project-images/uav-crack-detection.png": {
+    "status": 200,
+    "sha256": "722c893df72a521b569f84e75961271fb697c02318b101393295de83c454ae7e",
+    "type": "image/png"
+  },
+  "/about.css": {
+    "status": 200,
+    "sha256": "4db98e4870c15431a59ddc2fb1754e78304283b0e4a72ff6d84dcb7e41cb15c0",
+    "type": "text/css"
+  }
+}

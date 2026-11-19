@@ -1,0 +1,193 @@
+{
+  "python.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "python",
+    "license": "CC0-1.0"
+  },
+  "typescript.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "typescript-icon",
+    "license": "CC0-1.0"
+  },
+  "fastapi.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "fastapi-icon",
+    "license": "CC0-1.0"
+  },
+  "pydantic.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "pydantic-icon",
+    "license": "CC0-1.0"
+  },
+  "sqlalchemy.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/simple-icons.json",
+    "icon": "sqlalchemy",
+    "license": "CC0-1.0"
+  },
+  "postgresql.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "postgresql",
+    "license": "CC0-1.0"
+  },
+  "redis.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "redis",
+    "license": "CC0-1.0"
+  },
+  "qdrant.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "qdrant-icon",
+    "license": "CC0-1.0"
+  },
+  "docker.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "docker-icon",
+    "license": "CC0-1.0"
+  },
+  "amazon-s3.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "aws-s3",
+    "license": "CC0-1.0"
+  },
+  "git.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "git-icon",
+    "license": "CC0-1.0"
+  },
+  "github.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/simple-icons.json",
+    "icon": "github",
+    "license": "CC0-1.0"
+  },
+  "bitbucket.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "bitbucket",
+    "license": "CC0-1.0"
+  },
+  "claude-api.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "claude-icon",
+    "license": "CC0-1.0"
+  },
+  "langchain.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "langchain-icon",
+    "license": "CC0-1.0"
+  },
+  "langgraph.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/simple-icons.json",
+    "icon": "langgraph",
+    "license": "CC0-1.0"
+  },
+  "rag-pipelines.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/lucide.json",
+    "icon": "workflow",
+    "license": "ISC"
+  },
+  "embeddings.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/lucide.json",
+    "icon": "network",
+    "license": "ISC"
+  },
+  "semantic-search.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/lucide.json",
+    "icon": "search",
+    "license": "ISC"
+  },
+  "mcp.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/simple-icons.json",
+    "icon": "modelcontextprotocol",
+    "license": "CC0-1.0"
+  },
+  "ocr.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/lucide.json",
+    "icon": "scan-text",
+    "license": "ISC"
+  },
+  "vlms.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/lucide.json",
+    "icon": "scan-eye",
+    "license": "ISC"
+  },
+  "opencv.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "opencv",
+    "license": "CC0-1.0"
+  },
+  "pandas.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/simple-icons.json",
+    "icon": "pandas",
+    "license": "CC0-1.0"
+  },
+  "n8n.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "n8n-icon",
+    "license": "CC0-1.0"
+  },
+  "rest-apis.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/lucide.json",
+    "icon": "braces",
+    "license": "ISC"
+  },
+  "webhooks.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "webhooks",
+    "license": "CC0-1.0"
+  },
+  "jira-integration.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "jira",
+    "license": "CC0-1.0"
+  },
+  "erp-integration.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/lucide.json",
+    "icon": "blocks",
+    "license": "ISC"
+  },
+  "keycloak.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/simple-icons.json",
+    "icon": "keycloak",
+    "license": "CC0-1.0"
+  },
+  "oauth-2-0.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "oauth",
+    "license": "CC0-1.0"
+  },
+  "openid-connect.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/simple-icons.json",
+    "icon": "openid",
+    "license": "CC0-1.0"
+  },
+  "opentelemetry.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "opentelemetry-icon",
+    "license": "CC0-1.0"
+  },
+  "pytest.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/simple-icons.json",
+    "icon": "pytest",
+    "license": "CC0-1.0"
+  },
+  "playwright.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/logos.json",
+    "icon": "playwright",
+    "license": "CC0-1.0"
+  },
+  "sensetalk.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/lucide.json",
+    "icon": "file-code-2",
+    "license": "ISC"
+  },
+  "github-copilot.svg": {
+    "source": "https://github.com/iconify/icon-sets/blob/master/json/simple-icons.json",
+    "icon": "githubcopilot",
+    "license": "CC0-1.0"
+  },
+  "amazon-bedrock.png": {
+    "source": "https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/ArtificialIntelligence/Bedrock.png"
+  },
+  "helicone.svg": {
+    "source": "https://raw.githubusercontent.com/Helicone/helicone/main/web/public/static/helicone-icon.svg"
+  }
+}

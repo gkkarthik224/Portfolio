@@ -1,0 +1,571 @@
+/* Keep local preview badges hidden, including nodes restored by Framer. */
+.project-return-link {
+  display: inline-block;
+  padding: 16px 24px;
+  border: 1px solid currentColor;
+  border-radius: 16px;
+  color: inherit;
+  font-family: PortfolioHeader, Arial, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+.project-return-link:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.home-specialization {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 5;
+  margin: 0;
+  text-align: center;
+  font-family: PortfolioHeader, Arial, sans-serif;
+  font-size: clamp(12px, 1.3vw, 16px);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -.02em;
+}
+.home-specialization p { margin: 0; }
+/* The original template screenshots have been removed from project details. */
+.framer-1ilzg0z[data-framer-name="Images"],
+.framer-1r0crxv[data-framer-name="Images"],
+.framer-15chpct[data-framer-name="Images"] {
+  display: none !important;
+}
+/* Keep long project names and their sliding copies inside the footer. The
+   original hover variants and their transitions continue to control the slide. */
+.framer-Xr4Z8 .framer-1hv5ckr {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 20px;
+}
+.framer-Xr4Z8 .framer-308nai {
+  bottom: calc(var(--project-footer-height, 24px) + 40px) !important;
+}
+.framer-Xr4Z8 .framer-9w8kt3 {
+  min-width: 0;
+  width: 100% !important;
+  height: var(--project-title-height, 24px) !important;
+  gap: var(--project-title-gap, 120px) !important;
+  align-items: stretch !important;
+}
+.framer-Xr4Z8 .framer-mfxw34,
+.framer-Xr4Z8 .framer-1egitxs {
+  white-space: normal !important;
+  width: 100% !important;
+}
+.framer-Xr4Z8 .framer-9w8kt3 p {
+  white-space: normal !important;
+  overflow-wrap: break-word;
+}
+@media (max-width: 699px) {
+  .framer-Xr4Z8 .framer-1hv5ckr {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@font-face {
+  font-family: PortfolioHeader;
+  src: url('https://framerusercontent.com/assets/O2R7AhA6wjBk0GHLJl0N8fqxN0.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+nav [data-personal-brand] {
+  display: none !important;
+}
+nav p[data-personal-role], .header-role {
+  font-family: "Open Sauce Sans", OpenSauce, AboutSans, Arial, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.3 !important;
+}
+@media (max-width: 699px) {
+  nav p[data-personal-role] {
+    max-width: calc(100vw - 80px) !important;
+  }
+}
+
+
+nav [data-framer-name="Theme"] .framer-wR4pv {
+  width: 32px !important;
+  height: 18px !important;
+}
+body[framestack-theme="light"] nav [data-framer-name="Theme"] .framer-9epx9i {
+  left: 2px !important;
+  right: auto !important;
+}
+body[framestack-theme="dark"] nav [data-framer-name="Theme"] .framer-9epx9i {
+  left: auto !important;
+  right: 2px !important;
+}
+/* Keep the glass on a stationary, overscanned layer. Filtering the animated
+   card itself can split the backdrop into visibly different paint tiles. */
+.framer-TlDBu .framer-qHF7D,
+.framer-TlDBu .framer-DOfiF,
+.framer-TlDBu .framer-vs50g9 {
+  isolation: isolate;
+  contain: none;
+  overflow: clip !important;
+  background: transparent !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  will-change: auto !important;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  box-shadow: none !important;
+}
+.framer-TlDBu .framer-qHF7D::before,
+.framer-TlDBu .framer-DOfiF::before,
+.framer-TlDBu .framer-vs50g9::before {
+  content: "";
+  position: absolute;
+  inset: -16px;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+/* Paint the glass rim above the blur, without sampling or blurring it. */
+.framer-TlDBu .framer-qHF7D::after,
+.framer-TlDBu .framer-DOfiF::after,
+.framer-TlDBu .framer-vs50g9::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 1px var(--token-4ad2450b-089e-49a2-b079-884bae7e4c6d, rgb(255 255 255 / .06));
+}
+.framer-DOfiF:has([data-skills-link]) [data-framer-name="Ticker"] section {
+  contain: paint;
+  isolation: isolate;
+  overflow: clip !important;
+}
+
+html[data-dot-cursor="active"],
+html[data-dot-cursor="active"] body,
+html[data-dot-cursor="active"] body * {
+  cursor: none !important;
+}
+#portfolio-dot-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000);
+  z-index: 2147483647;
+  pointer-events: none;
+  display: none;
+}
+html[data-dot-cursor="active"] #portfolio-dot-cursor {
+  display: block;
+}
+
+[data-skills-link] {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-radius: inherit;
+  color: var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000);
+  font: 500 16px/1.2 "Open Sauce Sans", Inter, Arial, sans-serif;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+}
+.framer-DOfiF:has([data-skills-link]) > .framer-1cn3l5c-container {
+  visibility: visible;
+  margin-bottom: 28px;
+}
+.framer-DOfiF:has([data-skills-link]) [data-framer-name="Ticker"] {
+  --skills-logo-size: 72px;
+  --skills-logo-cycle: 704px;
+}
+.framer-DOfiF:has([data-skills-link]) [data-framer-name="Ticker"] ul {
+  width: max-content !important;
+  max-width: none !important;
+  gap: 16px !important;
+  animation: skills-logo-slide 24s linear infinite;
+}
+.framer-DOfiF:has([data-skills-link]) [data-framer-name="Ticker"] li {
+  flex: 0 0 var(--skills-logo-size) !important;
+  width: var(--skills-logo-size) !important;
+  height: var(--skills-logo-size) !important;
+}
+.framer-DOfiF:has([data-skills-link]) [data-framer-name="Ticker"] li > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* Keep the monochrome LangChain mark readable in the existing logo tiles. */
+.framer-DOfiF [data-framer-name="Ticker"] img[src="/skill-icons/langchain.svg"] {
+  filter: brightness(0);
+}
+html[framestack-theme="dark"] .framer-DOfiF [data-framer-name="Ticker"] img[src="/skill-icons/langchain.svg"] {
+  filter: brightness(0) invert(1);
+}
+@keyframes skills-logo-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-1 * var(--skills-logo-cycle))); }
+}
+@media (max-width: 699px) {
+  .framer-DOfiF:has([data-skills-link]) [data-framer-name="Ticker"] {
+    --skills-logo-size: 48px;
+    --skills-logo-cycle: 512px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .framer-DOfiF:has([data-skills-link]) [data-framer-name="Ticker"] ul {
+    animation: none;
+  }
+}
+[data-skills-link]:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -5px;
+}
+.skills-cell-arrow {
+  display: block;
+  flex: none;
+  width: 18px;
+  height: 16px;
+  color: var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000);
+  transform: rotate(-45deg);
+  transition: transform 350ms cubic-bezier(.22, 1, .36, 1);
+}
+.skills-cell-arrow svg { display: block; width: 100%; height: 100%; }
+.framer-qHF7D[data-home-cell-link] .framer-1q1abns { display: none !important; }
+.home-cell-arrow { position: absolute; right: 24px; bottom: 24px; z-index: 5; pointer-events: none; }
+.home-cell-title { display: grid; overflow: hidden; height: 22px; line-height: 22px; }
+.home-cell-title > span {
+  grid-area: 1 / 1;
+  display: block;
+  transform-origin: left center;
+  transition: transform 500ms cubic-bezier(.22, 1, .36, 1);
+}
+.home-cell-title > span:first-child { transform: translateY(0) skewY(0); }
+.home-cell-title > span:last-child { transform: translateY(135%) skewY(-12deg); }
+@media (hover: hover) {
+  [data-home-cell-link]:hover .skills-cell-arrow { transform: rotate(0deg); }
+  [data-skills-link]:hover .home-cell-title > span:first-child { transform: translateY(-135%) skewY(12deg); }
+  [data-skills-link]:hover .home-cell-title > span:last-child { transform: translateY(0) skewY(0); }
+}
+[data-home-cell-link]:focus-visible .skills-cell-arrow { transform: rotate(0deg); }
+[data-skills-link]:focus-visible .home-cell-title > span:first-child { transform: translateY(-135%) skewY(12deg); }
+[data-skills-link]:focus-visible .home-cell-title > span:last-child { transform: translateY(0) skewY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .skills-cell-arrow, .home-cell-title > span,
+  .framer-TlDBu .framer-qHF7D, .framer-TlDBu .framer-DOfiF, .framer-TlDBu .framer-vs50g9 { transition: none; }
+}
+@media (max-width: 699px) {
+  [data-skills-link] { padding: 16px 20px; }
+  .skills-cell-arrow { width: 16px; height: 14px; }
+  .home-cell-arrow { right: 20px; bottom: 20px; }
+}
+
+/* Header back links are retired; Home remains in the main navigation menu. */
+.framer-Txym4 .framer-snsv5m { display: none !important; }
+
+nav [data-framer-name="City + Time"] > :not([data-personal-location]) {
+  display: none !important;
+}
+nav [data-personal-location] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  color: var(--token-ca1e8363-88d0-40f1-abb8-1f9ce6252271, #fff);
+  font: 500 16px/1.2 "Open Sauce Sans", Inter, Arial, sans-serif;
+  letter-spacing: -0.02em;
+}
+nav [data-personal-location] svg {
+  flex: none;
+}
+
+/* Match the home cards' subtle rim and keep the cutout portrait sharp. */
+.framer-TlDBu .framer-vs50g9 {
+  box-shadow: inset 0 1px 0 1px var(--token-4ad2450b-089e-49a2-b079-884bae7e4c6d, rgba(255, 255, 255, 0.06)) !important;
+}
+.framer-TlDBu .framer-vs50g9 img {
+  transform: scale(1);
+  transform-origin: 50% 60%;
+  transition: transform 380ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.framer-TlDBu .framer-vs50g9 > .framer-jjmphp {
+  transition: opacity 250ms ease;
+}
+@media (hover: hover) {
+  .framer-TlDBu .framer-vs50g9:hover > .framer-jjmphp {
+    opacity: 0.16 !important;
+  }
+  .framer-TlDBu .framer-vs50g9:hover img {
+    transform: scale(1.04);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .framer-TlDBu .framer-vs50g9 img,
+  .framer-TlDBu .framer-vs50g9 > .framer-jjmphp {
+    transition: none;
+  }
+  .framer-TlDBu .framer-vs50g9:hover img {
+    transform: none;
+  }
+}
+
+[data-framer-name="Get Template Button"],
+#__framer-badge-container,
+.__framer-badge {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Keep the longer personalized hero name on one line at every breakpoint. */
+p[data-personal-role] {
+  max-width: 440px;
+  white-space: normal !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+}
+
+.framer-Txym4 .framer-1fnd8 {
+  justify-content: flex-start !important;
+  flex: 1 1 auto !important;
+  min-width: 0;
+  width: auto !important;
+  gap: 40px !important;
+  overflow: visible !important;
+}
+.framer-Txym4 .framer-1fnd8 > :first-child {
+  flex-shrink: 0;
+}
+nav [data-framer-name="Position"]:has([data-personal-role]) {
+  visibility: visible !important;
+  flex: 0 1 auto !important;
+  min-width: 0;
+  width: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+nav [data-framer-component-type="RichTextContainer"]:has(> [data-personal-role]) {
+  min-width: 0;
+  height: auto !important;
+  white-space: normal !important;
+  overflow: visible !important;
+}
+#personalized-role {
+  display: none !important;
+}
+@media (max-width: 699px) {
+  nav.framer-Txym4 {
+    overflow: visible !important;
+  }
+  .framer-Txym4 .framer-1fnd8 {
+    gap: 16px !important;
+    min-height: 24px;
+  }
+  p[data-personal-role] {
+    max-width: 44vw;
+    font-size: 10px !important;
+    min-height: 24px;
+    height: auto !important;
+  }
+}
+
+h1[data-personal-name] {
+  font-size: clamp(32px, 9.5vw, 160px) !important;
+  letter-spacing: -0.04em !important;
+  white-space: nowrap;
+}
+
+/* Only the active hover title may paint. Skewed outgoing layers otherwise
+   leave fragments inside the title's clipping area. Keep their layout intact. */
+.framer-TlDBu .framer-1f9w7vf > * {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Personalized card order. Flatten the old Contact/portrait row so each card
+   occupies its own grid area without moving React-owned DOM nodes. */
+.framer-TlDBu .framer-1nw48ne > .framer-hg0gic {
+  display: contents !important;
+}
+@media (min-width: 700px) {
+  .framer-TlDBu .framer-1nw48ne > .framer-wgsb95-container {
+    grid-area: 2 / 1 / 3 / 3 !important;
+  }
+  .framer-TlDBu .framer-1nw48ne > .framer-1y7do4z-container {
+    grid-area: 1 / 2 / 2 / 5 !important;
+  }
+  .framer-TlDBu .framer-hg0gic > .framer-vs50g9 {
+    grid-area: 1 / 1 / 2 / 2 !important;
+  }
+  .framer-TlDBu .framer-hg0gic > .framer-1t6v1ro-container {
+    grid-area: 2 / 3 / 3 / 4 !important;
+  }
+  .framer-TlDBu .framer-1nw48ne > .framer-1fuuf7m {
+    grid-area: 2 / 4 / 3 / 5 !important;
+  }
+}
+@media (min-width: 700px) and (max-width: 1024px) {
+  .framer-TlDBu .framer-hg0gic > .framer-vs50g9 {
+    grid-column: 1 / 3 !important;
+  }
+  .framer-TlDBu .framer-1nw48ne > .framer-1y7do4z-container {
+    grid-column: 3 / 5 !important;
+  }
+}
+@media (max-width: 699px) {
+  .framer-TlDBu .framer-1nw48ne {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(4, minmax(0, 1fr)) !important;
+  }
+  .framer-TlDBu .framer-1nw48ne > .framer-wgsb95-container {
+    grid-area: 3 / 1 / 4 / 2 !important;
+  }
+  .framer-TlDBu .framer-1nw48ne > .framer-1y7do4z-container {
+    grid-area: 2 / 1 / 3 / 3 !important;
+  }
+  .framer-TlDBu .framer-hg0gic > .framer-vs50g9 {
+    grid-area: 1 / 1 / 2 / 3 !important;
+  }
+  .framer-TlDBu .framer-hg0gic > .framer-1t6v1ro-container {
+    grid-area: 3 / 2 / 4 / 3 !important;
+  }
+  .framer-TlDBu .framer-1nw48ne > .framer-1fuuf7m {
+    grid-area: 4 / 1 / 5 / 3 !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+  .framer-TlDBu .framer-vs50g9 img {
+    object-position: 50% 20% !important;
+  }
+  .framer-TlDBu .framer-1nw48ne > .framer-wgsb95-container,
+  .framer-TlDBu .framer-1nw48ne > .framer-1y7do4z-container {
+    height: 100% !important;
+  }
+}
+.framer-TlDBu:not(.framer-v-1g4gxlq):not(.framer-v-1o49r8j):not(.framer-v-1usno1z):not(.framer-v-a2qjf6):not(.framer-v-1rsgm1u):not(.framer-v-1mdqkcj):not(.framer-v-1pt9vom) .framer-1f9w7vf > .framer-1z0v65l,
+.framer-TlDBu.framer-v-1g4gxlq .framer-1f9w7vf > .framer-1nww44e,
+.framer-TlDBu.framer-v-1o49r8j .framer-1f9w7vf > .framer-11rhyre,
+.framer-TlDBu.framer-v-1usno1z .framer-1f9w7vf > .framer-1aj25sm,
+.framer-TlDBu.framer-v-a2qjf6 .framer-1f9w7vf > .framer-1qqtqqg,
+.framer-TlDBu.framer-v-1rsgm1u .framer-1f9w7vf > .framer-9qowu9,
+.framer-TlDBu.framer-v-1mdqkcj .framer-1f9w7vf > .framer-5zt3cw,
+.framer-TlDBu.framer-v-1pt9vom .framer-1f9w7vf > .framer-112zoka {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.cell-top-menu {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10010;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  padding: 6px;
+  border: 1px solid color-mix(in srgb, var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000) 12%, transparent);
+  border-radius: 24px;
+  background: var(--token-efbe759a-c6fd-4186-bb39-f926ba3e6290, rgb(255 255 255 / .04));
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 1px var(--token-4ad2450b-089e-49a2-b079-884bae7e4c6d, rgb(255 255 255 / .06));
+  overflow-x: auto;
+  scrollbar-width: none;
+  transition: opacity 300ms var(--portfolio-ease, ease), translate 600ms var(--portfolio-ease, ease);
+}
+.cell-top-menu::-webkit-scrollbar { display: none; }
+.cell-top-menu a {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 40px;
+  padding: 10px 16px;
+  border-radius: 18px;
+  font: 500 13px/1.2 PortfolioHeader, "Open Sauce Sans", Arial, sans-serif;
+  color: var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000);
+  text-decoration: none;
+  white-space: nowrap;
+  opacity: .6;
+  transition: opacity 220ms ease, text-shadow 220ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.cell-top-menu a[data-cell-selected], .cell-top-menu a:hover, .cell-top-menu a:focus-visible { opacity: 1; }
+.cell-top-menu a:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; }
+.cell-top-menu a:focus-visible {
+  text-shadow: 0 0 12px color-mix(in srgb, currentColor 28%, transparent);
+}
+.cell-menu-cell {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  width: var(--cell-width, 0px);
+  height: var(--cell-height, 0px);
+  transform: translate(var(--cell-x, 0px), var(--cell-y, 0px));
+  border: 1px solid color-mix(in srgb, var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000) 10%, transparent);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #ffffff14, #ffffff00 65%), color-mix(in srgb, var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000) 6%, transparent);
+  box-shadow: inset 0 1px 0 #ffffff1f;
+  transition: transform 420ms var(--portfolio-ease, ease), width 420ms var(--portfolio-ease, ease), height 420ms var(--portfolio-ease, ease), background-color 220ms ease, box-shadow 220ms ease;
+}
+/* Keep the hover halo around the restored glass selection. */
+.cell-top-menu:has(a:focus-visible) .cell-menu-cell {
+  background: linear-gradient(145deg, #ffffff14, #ffffff00 65%), color-mix(in srgb, var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000) 10%, transparent);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000) 18%, transparent), inset 0 0 12px color-mix(in srgb, var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000) 7%, transparent);
+}
+@media (hover: hover) {
+  .cell-top-menu a:hover { text-shadow: 0 0 12px color-mix(in srgb, currentColor 28%, transparent); }
+  .cell-top-menu:has(a:hover) .cell-menu-cell {
+    background: linear-gradient(145deg, #ffffff14, #ffffff00 65%), color-mix(in srgb, var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000) 10%, transparent);
+    box-shadow: 0 0 16px color-mix(in srgb, var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000) 18%, transparent), inset 0 0 12px color-mix(in srgb, var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000) 7%, transparent);
+  }
+}
+.cell-top-menu:not([data-cell-ready]) .cell-menu-cell { transition: none; }
+html[data-page-loading] .cell-top-menu { opacity: 0; translate: 0 -8px; }
+.has-cell-menu main{margin-top:56px}
+@media(max-width:699px){
+  .cell-top-menu{top:16px;gap:2px;border-radius:22px}
+  .cell-top-menu a{min-height:38px;padding:9px 9px;font-size:12px}
+  .has-cell-menu main{margin-top:58px}
+}
+@media(prefers-reduced-motion:reduce){
+  .cell-top-menu,.cell-top-menu a,.cell-menu-cell{transition:none}
+  html[data-page-loading] .cell-top-menu{translate:none}
+}
+
+.portfolio-footer { display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; padding:32px; font:14px/1.4 Inter,Arial,sans-serif; }
+
+/* Personal contact links replace the project budget choices. */
+.contact-details{display:flex;flex-direction:column;gap:12px;width:100%;min-width:0;color:var(--token-5fde730a-8086-4528-a317-d71b3bf4efde,#000);font-family:PortfolioHeader,Arial,sans-serif}
+.contact-details h2{font-size:20px;font-weight:500;margin:0 0 4px}
+.contact-details a{display:flex;flex-direction:column;gap:6px;padding:16px 20px;border:1px solid #8883;border-radius:16px;background:#8881;color:inherit;text-decoration:none;overflow-wrap:anywhere}
+.contact-details-label{font-size:13px;opacity:.55}
+.contact-details a:hover{border-color:currentColor}
+.contact-details a:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+
+/* Remove every role/location header, including headers restored by Framer. */
+nav.framer-Txym4,
+.portfolio-context-bar,
+.about-header,
+.skills-header {
+  display: none !important;
+}

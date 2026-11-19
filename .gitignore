@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+*.log
+*.pid
+artifacts/
+.env
+.env.*
+!.env.example
+playwright-report/
+test-results/
