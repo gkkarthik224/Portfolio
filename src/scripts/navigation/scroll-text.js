@@ -64,6 +64,8 @@
     frame = undefined;
     const viewport = document.documentElement.clientHeight;
     const limit = Math.max(0, document.documentElement.scrollHeight - viewport);
+    const scroll = scrollY;
+    const measurements = [];
     for (const block of blocks.values()) {
       if (!block.element.isConnected) {
         blocks.delete(block.element);
@@ -72,12 +74,19 @@
       }
       if (block.title) continue;
       const bounds = block.element.getBoundingClientRect();
-      const top = bounds.top + scrollY;
+      const top = bounds.top + scroll;
       // Short pages must also finish their final paragraphs
       // at the page bottom even when they cannot reach the 30% viewport line.
       const end = Math.min(limit, top + bounds.height - viewport * .3);
       const start = Math.min(top - viewport * .6, end - 1);
-      const progress = clamp((scrollY - start) / (end - start));
+      const progress = clamp((scroll - start) / (end - start));
+      if (block.progress === progress && block.reduced === reduced.matches) continue;
+      measurements.push({block, progress});
+    }
+    // Read all geometry before changing styles, and leave settled text alone.
+    for (const {block, progress} of measurements) {
+      block.progress = progress;
+      block.reduced = reduced.matches;
       for (const character of block.characters) {
         const opacity = reduced.matches ? 1 : .2 + .8 * clamp((progress - character.start) / (character.end - character.start));
         if (character.opacity === opacity) continue;

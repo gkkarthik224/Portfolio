@@ -49,12 +49,20 @@ try {
   await call('Emulation.setTouchEmulationEnabled', {enabled: true, maxTouchPoints: 1});
   const settle = async expected => {
     for (let i = 0; i < 30; i++) {
-      if (await evaluate(`location.pathname === ${JSON.stringify(expected)} && document.readyState !== 'loading'`)) { await pause(800); return; }
+      if (await evaluate(`location.pathname === ${JSON.stringify(expected)} && document.readyState !== 'loading' && document.documentElement?.hasAttribute('data-page-ready') && document.querySelectorAll('.portfolio-certificate-button').length === 2`)) { await pause(800); return; }
       await pause(200);
     }
     throw Error(`Navigation did not reach ${expected}; actual URL: ${await evaluate('location.href')}`);
   };
-  const navigate = async path => { await call('Page.navigate', {url: 'http://127.0.0.1:8080' + path}); await settle(path); };
+  const navigate = async path => {
+    const previous = await evaluate('performance.timeOrigin');
+    await call('Page.navigate', {url: 'http://127.0.0.1:8080' + path});
+    for (let i = 0; i < 40; i++) {
+      if (await evaluate(`performance.timeOrigin !== ${previous}`)) break;
+      await pause(100);
+    }
+    await settle(path);
+  };
   const tap = async selector => {
     const point = await evaluate(`(() => { const el = document.querySelector(${JSON.stringify(selector)}); if (!el) throw Error('Missing control: '+${JSON.stringify(selector)}); el.scrollIntoView({block:'center',behavior:'instant'}); const r=el.getBoundingClientRect(); return {x:r.x+r.width/2,y:r.y+r.height/2}; })()`);
     await call('Input.dispatchTouchEvent', {type: 'touchStart', touchPoints: [point]});
@@ -77,8 +85,8 @@ try {
       const panel = '#project-certificate-'+id;
       const control = panel+' > summary';
       await tap(control);
-      const shown = await evaluate(`(() => {const panel=document.querySelector(${JSON.stringify(panel)}); return {open:panel.open,text:panel.querySelector('.portfolio-certificate-panel').innerText};})()`);
-      if (!shown.open || !shown.text) throw Error('Certificate did not open: '+JSON.stringify(shown));
+      const shown = await evaluate(`(async () => {const panel=document.querySelector(${JSON.stringify(panel)}); const content=panel.querySelector('.portfolio-certificate-panel'); const image=content.querySelector('img'); if(image) await image.decode().catch(() => {}); return {open:panel.open,text:content.innerText,imageLoaded:!!image?.naturalWidth};})()`);
+      if (!shown.open || (!shown.text && !shown.imageLoaded)) throw Error('Certificate did not open: '+JSON.stringify(shown));
       report.checks.push({name:'disclosure-'+id+'-'+width,...shown});
       if (id==='foome') await capture('frp-certificate-'+width);
       await tap(control);

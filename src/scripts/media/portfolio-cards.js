@@ -38,9 +38,9 @@
       summary: 'Connects automated-test failure evidence with duplicate checks and structured Jira reporting.',
       description: 'Captures Eggplant execution failures, gathers diagnostics and checks existing Jira tickets before structuring a new issue. My contribution covers evidence collection, duplicate-checking logic and the healing/logging framework.',
       tags: ['Failure evidence', 'Jira integration'],
-      status: 'Internal integration tool / system',
+      status: 'Deployed',
       role: 'Developer · Evidence collection and duplicate checks',
-      tools: ['Eggplant', 'Jira'],
+      tools: ['PostgreSQL', 'Vector DB', 'Transformers', 'Webhook', 'FastAPI'],
       evidenceNote: 'Sanitized overview. Ticket examples, employer code and internal test artifacts are confidential under NDA.',
       caseStudyUrl: '/portfolio/defect-management'
     },
@@ -49,7 +49,7 @@
       title: 'FRP Material Strength Analyser',
       organization: 'IIT Bombay (Intern)',
       category: 'Engineering Software',
-      certificate: {image: null},
+      certificate: {image: 'iit-bombay-internship-certificate.jpeg'},
       summary: 'Software for exploring and analysing the strength of fibre-reinforced polymer materials.',
       description: 'An engineering software project focused on fibre-reinforced polymer (FRP) material strength. It brings material analysis into a dedicated software interface.',
       tags: ['Material analysis', 'Engineering'],
@@ -61,7 +61,7 @@
       title: 'UAV Crack Detection System',
       organization: 'IIT Bombay (Intern)',
       category: 'Inspection Technology',
-      certificate: {image: null},
+      certificate: {image: 'iit-bombay-internship-certificate.jpeg'},
       summary: 'Exploring UAV-based crack detection for structural inspection workflows.',
       description: 'A project focused on detecting cracks using UAV imagery. It connects aerial inspection with software-assisted analysis of visible structural defects.',
       tags: ['UAV inspection', 'Crack detection'],
@@ -124,6 +124,8 @@
       links.append(link);
     });
     if (links.childElementCount) introduction.append(links);
+    details.append(overview);
+    content.append(introduction, details);
     if (project.certificate) {
       const certificate = el('details', 'portfolio-project-certificate');
       certificate.id = `project-certificate-${project.id}`;
@@ -139,10 +141,8 @@
         panel.append(image);
       } else panel.append(el('p', '', 'Certificate not added yet.'));
       certificate.append(panel);
-      overview.append(certificate);
+      content.append(certificate);
     }
-    details.append(overview);
-    content.append(introduction, details);
     card.append(content);
     grid.append(card);
   });

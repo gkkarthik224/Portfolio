@@ -19,8 +19,8 @@
   function startScrolling() {
     if (scroller || preference.matches || !window.PortfolioSmoothScroll) return;
     scroller = new window.PortfolioSmoothScroll({
-      lerp: 0.095,
-      wheelMultiplier: 0.9,
+      lerp: 0.075,
+      wheelMultiplier: 1,
       smoothWheel: true,
       syncTouch: false,
       prevent: node => node.matches?.('textarea, select, [contenteditable="true"], .cell-top-menu')

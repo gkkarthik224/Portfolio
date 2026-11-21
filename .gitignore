@@ -5,6 +5,7 @@ node_modules/
 *.log
 *.pid
 artifacts/
+dist/
 .env
 .env.*
 !.env.example

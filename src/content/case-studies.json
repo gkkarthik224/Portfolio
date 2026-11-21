@@ -79,7 +79,7 @@
     "file": "src/pages/projects/defect-management/index.html",
     "title": "Auto Defect Management System",
     "eyebrow": "Test automation / Integration engineering",
-    "status": "Internal integration tool / system",
+    "status": "Deployed",
     "association": "Ideabytes · NDA",
     "role": "Developer · Evidence collection, duplicate checks and logging",
     "summary": "An integration workflow that collects automated-test failure evidence, checks existing Jira issues and structures new defect reports.",
@@ -103,9 +103,9 @@
       {"title": "Collect context at the failure boundary", "detail": "Evidence collection is part of the integration workflow so that new issue reports can carry diagnostic context."},
       {"title": "Connect reporting to script maintenance", "detail": "The healing and logging framework provides a bridge from defect-management work to the connected Script Change Management system."}
     ],
-    "tools": ["Eggplant", "Jira", "Evidence collection", "Duplicate checks"],
+    "tools": ["PostgreSQL", "Vector DB", "Transformers", "Webhook", "FastAPI"],
     "resultTitle": "Internal-system scope and evidence",
-    "result": "An internal integration tool connecting test execution, diagnostic evidence and Jira reporting. The disclosed contribution covers evidence collection, duplicate checks and the healing/logging framework; deployment scale and measured business impact are not included.",
+    "result": "A deployed internal integration tool connecting test execution, diagnostic evidence and Jira reporting. The disclosed contribution covers evidence collection, duplicate checks and the healing/logging framework; deployment scale and measured business impact are not included.",
     "evidence": "Employer code, ticket examples and test artifacts remain confidential under NDA. The public evidence is this sanitized workflow and contribution summary.",
     "related": "script-change-management"
   }

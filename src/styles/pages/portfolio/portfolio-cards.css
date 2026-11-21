@@ -77,7 +77,7 @@ html[data-page-ready] .portfolio-projects-intro h1 .portfolio-title-glow {
   .portfolio-project-card:hover { box-shadow: 0 0 8px var(--project-halo), 0 0 28px var(--project-halo); }
   .portfolio-project-card:hover::after { border-color: color-mix(in srgb, var(--project-ink) 40%, var(--project-border)); }
 }
-.portfolio-project-content { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(36px, 5vw, 80px); padding: clamp(28px, 3.4vw, 44px); }
+.portfolio-project-content { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 26px clamp(36px, 5vw, 80px); padding: clamp(28px, 3.4vw, 44px); }
 .portfolio-project-introduction, .portfolio-project-details { min-width: 0; }
 .portfolio-project-category { margin: 0 0 18px; color: var(--project-muted); font-size: 13px; line-height: 1.5; }
 .portfolio-project-content h3 { margin: 0 0 14px; max-width: 24ch; font-size: clamp(26px, 2.5vw, 36px); line-height: 1.2; letter-spacing: -.04em; font-weight: 500; text-align: left !important; text-wrap: balance; overflow-wrap: break-word; }
@@ -96,12 +96,14 @@ html[data-page-ready] .portfolio-projects-intro h1 .portfolio-title-glow {
 .portfolio-project-links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--project-ink); text-decoration-line: underline; text-decoration-color: var(--project-border); text-underline-offset: 6px; transition: text-decoration-color 160ms ease; }
 .portfolio-project-links a:hover { text-decoration-color: currentColor; }
 .portfolio-project-links a:focus-visible, .portfolio-certificate-button:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
-.portfolio-project-certificate { margin-top: 24px; font-size: 14px; line-height: 1.7; }
-.portfolio-certificate-button { width: fit-content; padding: 8px 0; cursor: pointer; text-underline-offset: 5px; }
+.portfolio-project-certificate { grid-column: 1 / -1; min-width: 0; font-size: 14px; line-height: 1.7; }
+.portfolio-certificate-button { display: inline-flex; width: fit-content; padding: 8px 0; list-style: none; cursor: pointer; text-decoration: underline; text-underline-offset: 5px; }
+.portfolio-certificate-button::marker { content: ""; }
+.portfolio-certificate-button::-webkit-details-marker { display: none; }
 .portfolio-certificate-button:hover { text-decoration: underline; }
-.portfolio-certificate-panel { margin-top: 12px; padding: 16px 20px; border: 1px solid var(--project-border); }
+.portfolio-certificate-panel { width: min(100%, 480px); margin: 12px auto 0; padding: 16px 20px; border: 1px solid var(--project-border); }
 .portfolio-certificate-panel p { margin: 0; color: var(--project-muted); }
-.portfolio-certificate-panel img { display: block; max-width: 100%; height: auto; }
+.portfolio-certificate-panel img { display: block; max-width: 100%; height: auto; margin-inline: auto; }
 @media (max-width: 899px) {
   .portfolio-project-content { grid-template-columns: minmax(0, 1fr); gap: 28px; padding: 28px; }
   .portfolio-project-content h3 { max-width: 28ch; font-size: 30px; }
