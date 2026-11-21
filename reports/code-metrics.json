@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-11-21T20:35:43.916Z",
+  "generatedAtUtc": "2026-11-21T20:38:15.412Z",
   "methodology": "Physical lines in tracked/unignored source files. Code includes HTML, CSS, JS/MJS and Python. Config, documentation and SVG are outside code totals. Reports, dependencies, build output and artifacts are excluded. Minified runtime is counted as stored, not pretty-printed.",
   "before": {
     "files": 166,
@@ -55,17 +55,17 @@
   },
   "reduction": {
     "files": 33,
-    "bytes": -681973,
-    "codeLines": 1675,
-    "textLines": 2367
+    "bytes": -681752,
+    "codeLines": 1678,
+    "textLines": 2370
   },
   "current": {
     "files": 133,
-    "bytes": 16656755,
-    "textLines": 6466,
+    "bytes": 16656534,
+    "textLines": 6463,
     "codeFiles": 73,
-    "codeLines": 5272,
-    "codeBytes": 4906962,
+    "codeLines": 5269,
+    "codeBytes": 4906741,
     "groups": {
       "Bundled runtime": {
         "files": 38,
@@ -79,8 +79,8 @@
       },
       "Application source": {
         "files": 22,
-        "lines": 3248,
-        "bytes": 666306
+        "lines": 3245,
+        "bytes": 666085
       },
       "Generated case studies": {
         "files": 3,
@@ -106,8 +106,8 @@
       },
       "CSS": {
         "files": 7,
-        "lines": 1384,
-        "bytes": 67202
+        "lines": 1381,
+        "bytes": 66981
       }
     }
   },
@@ -973,8 +973,8 @@
     },
     {
       "path": "src/styles/pages/about/about.css",
-      "bytes": 5923,
-      "lines": 130
+      "bytes": 5702,
+      "lines": 127
     },
     {
       "path": "src/styles/pages/contact/contact.css",
