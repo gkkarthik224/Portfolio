@@ -565,7 +565,7 @@ nav.framer-Txym4,
   display: none !important;
 }
 
-/* A single accessible theme switch stays available above every page. */
+/* One theme switch: fixed on desktop, after page content on mobile. */
 .portfolio-theme-switch {
   position: fixed;
   top: calc(20px + env(safe-area-inset-top, 0px));
@@ -604,14 +604,22 @@ html[framestack-theme="dark"] .portfolio-theme-switch > span { transform: transl
 .portfolio-theme-switch:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 @media (max-width: 699px) {
   .portfolio-theme-switch {
-    top: calc(16px + env(safe-area-inset-top, 0px));
-    right: max(16px, env(safe-area-inset-right, 0px));
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 24px auto max(24px, env(safe-area-inset-bottom, 0px));
   }
   .cell-top-menu {
     left: 16px;
     transform: none;
-    max-width: calc(100vw - 112px);
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+    max-width: none;
+    overflow: hidden;
   }
+  .cell-top-menu a { min-width: 0; min-height: 44px; padding: 9px 2px; font-size: clamp(10px, 3vw, 12px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-theme-switch > span { transition: none; }

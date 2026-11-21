@@ -19,7 +19,13 @@
     '2d8dd10f-093d-46af-a75a-ef4a30e3ffdc': ['#fff', '#fff']
   };
   function mountSwitch() {
-    if (!document.body || document.getElementById('portfolio-theme-switch')) return;
+    if (!document.body) return;
+    const existing = document.getElementById('portfolio-theme-switch');
+    if (existing) {
+      // Mobile places this control in normal flow after the page content.
+      if (document.body.lastElementChild !== existing) document.body.appendChild(existing);
+      return;
+    }
     const button = document.createElement('button');
     button.id = 'portfolio-theme-switch';
     button.className = 'theme-toggle portfolio-theme-switch';

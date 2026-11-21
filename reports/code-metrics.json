@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-11-21T20:46:29.175Z",
+  "generatedAtUtc": "2026-11-21T21:18:33.729Z",
   "methodology": "Physical lines in tracked/unignored source files. Code includes HTML, CSS, JS/MJS and Python. Config, documentation and SVG are outside code totals. Reports, dependencies, build output and artifacts are excluded. Minified runtime is counted as stored, not pretty-printed.",
   "before": {
     "files": 166,
@@ -55,17 +55,17 @@
   },
   "reduction": {
     "files": 33,
-    "bytes": -682044,
-    "codeLines": 1670,
-    "textLines": 2362
+    "bytes": -682538,
+    "codeLines": 1656,
+    "textLines": 2348
   },
   "current": {
     "files": 133,
-    "bytes": 16656826,
-    "textLines": 6471,
+    "bytes": 16657320,
+    "textLines": 6485,
     "codeFiles": 73,
-    "codeLines": 5277,
-    "codeBytes": 4907033,
+    "codeLines": 5291,
+    "codeBytes": 4907527,
     "groups": {
       "Bundled runtime": {
         "files": 38,
@@ -79,8 +79,8 @@
       },
       "Application source": {
         "files": 22,
-        "lines": 3253,
-        "bytes": 666377
+        "lines": 3267,
+        "bytes": 666871
       },
       "Generated case studies": {
         "files": 3,
@@ -91,8 +91,8 @@
     "byLanguage": {
       "JavaScript": {
         "files": 53,
-        "lines": 2584,
-        "bytes": 4269351
+        "lines": 2590,
+        "bytes": 4269577
       },
       "Python": {
         "files": 5,
@@ -106,8 +106,8 @@
       },
       "CSS": {
         "files": 7,
-        "lines": 1389,
-        "bytes": 67273
+        "lines": 1397,
+        "bytes": 67541
       }
     }
   },
@@ -968,8 +968,8 @@
     },
     {
       "path": "src/scripts/theme/theme-sync.js",
-      "bytes": 4399,
-      "lines": 85
+      "bytes": 4625,
+      "lines": 91
     },
     {
       "path": "src/styles/pages/about/about.css",
@@ -998,8 +998,8 @@
     },
     {
       "path": "src/styles/shared/local-customizations.css",
-      "bytes": 23564,
-      "lines": 644
+      "bytes": 23832,
+      "lines": 652
     },
     {
       "path": "src/styles/shared/page-motion.css",
