@@ -1,4 +1,4 @@
-// Shared Vexoo text reveal: scroll between 60% and 30% of the viewport.
+// Shared Vexoo text reveal: scroll between 80% and 30% of the viewport.
 (() => {
   const root = document.documentElement;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -78,7 +78,7 @@
       // Short pages must also finish their final paragraphs
       // at the page bottom even when they cannot reach the 30% viewport line.
       const end = Math.min(limit, top + bounds.height - viewport * .3);
-      const start = Math.min(top - viewport * .6, end - 1);
+      const start = Math.min(top - viewport * .8, end - 1);
       const progress = clamp((scroll - start) / (end - start));
       if (block.progress === progress && block.reduced === reduced.matches) continue;
       measurements.push({block, progress});
