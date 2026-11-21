@@ -569,3 +569,77 @@ nav.framer-Txym4,
 .skills-header {
   display: none !important;
 }
+
+/* A single accessible theme switch stays available above every page. */
+.portfolio-theme-switch {
+  position: fixed;
+  top: calc(20px + env(safe-area-inset-top, 0px));
+  right: max(24px, env(safe-area-inset-right, 0px));
+  z-index: 10030;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 52px;
+  height: 32px;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid color-mix(in srgb, var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000) 14%, transparent);
+  border-radius: 20px;
+  background: var(--token-efbe759a-c6fd-4186-bb39-f926ba3e6290, rgb(128 128 128 / .06));
+  color: var(--token-5fde730a-8086-4528-a317-d71b3bf4efde, #000);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 #ffffff1f;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.portfolio-theme-switch > span {
+  display: block;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: currentColor;
+  transform: translateX(0);
+  transition: transform 220ms ease;
+}
+html[framestack-theme="dark"] .portfolio-theme-switch { justify-content: flex-start; }
+html[framestack-theme="dark"] .portfolio-theme-switch > span { transform: translateX(20px); }
+.portfolio-theme-switch:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+@media (max-width: 699px) {
+  .portfolio-theme-switch {
+    top: calc(16px + env(safe-area-inset-top, 0px));
+    right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .home-specialization {
+    top: 16px;
+    left: 16px;
+    right: 112px;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    text-align: left;
+  }
+  .cell-top-menu {
+    left: 16px;
+    transform: none;
+    max-width: calc(100vw - 112px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-theme-switch > span { transition: none; }
+}
+
+/* Shared shine for Skills and the Projects production-grade heading. */
+@keyframes skills-glow-pulse {
+  0%, 100% {
+    text-shadow:
+      0 0 .08em rgb(177 210 255 / .3),
+      0 0 .3em rgb(177 210 255 / .4),
+      0 0 .65em rgb(177 210 255 / .22);
+  }
+  50% {
+    text-shadow: 0 0 .08em rgb(177 210 255 / 0), 0 0 .3em rgb(177 210 255 / 0), 0 0 .65em rgb(177 210 255 / 0);
+  }
+}

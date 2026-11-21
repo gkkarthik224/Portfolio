@@ -18,7 +18,19 @@
     'ca1e8363-88d0-40f1-abb8-1f9ce6252271': ['#fff', '#fff'],
     '2d8dd10f-093d-46af-a75a-ef4a30e3ffdc': ['#fff', '#fff']
   };
+  function mountSwitch() {
+    if (!document.body || document.getElementById('portfolio-theme-switch')) return;
+    const button = document.createElement('button');
+    button.id = 'portfolio-theme-switch';
+    button.className = 'theme-toggle portfolio-theme-switch';
+    button.type = 'button';
+    const thumb = document.createElement('span');
+    thumb.setAttribute('aria-hidden', 'true');
+    button.appendChild(thumb);
+    document.body.appendChild(button);
+  }
   function apply() {
+    mountSwitch();
     const dark = theme === 'dark';
     for (const element of [root, document.body].filter(Boolean)) {
       if (element.getAttribute('framestack-theme') !== theme) element.setAttribute('framestack-theme', theme);

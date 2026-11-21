@@ -19,7 +19,10 @@
   function startScrolling() {
     if (scroller || preference.matches || !window.PortfolioSmoothScroll) return;
     scroller = new window.PortfolioSmoothScroll({
-      duration: 1, smoothWheel: true, syncTouch: false,
+      lerp: 0.095,
+      wheelMultiplier: 0.9,
+      smoothWheel: true,
+      syncTouch: false,
       prevent: node => node.matches?.('textarea, select, [contenteditable="true"], .cell-top-menu')
     });
     const tick = time => {

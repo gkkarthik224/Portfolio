@@ -112,17 +112,7 @@ html[data-page-ready] .skills-intro h1 .skills-glow {
   opacity: 1;
   animation: skills-glow-pulse 5000ms ease-in-out 2000ms infinite;
 }
-@keyframes skills-glow-pulse {
-  0%, 100% {
-    text-shadow:
-      0 0 .08em rgb(177 210 255 / .3),
-      0 0 .3em rgb(177 210 255 / .4),
-      0 0 .65em rgb(177 210 255 / .22);
-  }
-  50% {
-    text-shadow: 0 0 .08em rgb(177 210 255 / 0), 0 0 .3em rgb(177 210 255 / 0), 0 0 .65em rgb(177 210 255 / 0);
-  }
-}
+
 html[data-page-loading] .skills-text-word { opacity: 0; }
 html[data-page-ready] .skills-text-word {
   /* Same word spring and stagger as the Projects introduction. */

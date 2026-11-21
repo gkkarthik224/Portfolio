@@ -55,13 +55,14 @@ test('projects render distinct summaries and open the available case study', asy
   await ready(page);
 });
 
-test('project titles are centered and card text stays visible while scrolling', async ({ page }) => {
+test('text-only project rows stay readable while scrolling', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await visit(page, '/portfolio');
   const section = page.locator('#portfolio-projects');
   const card = section.getByRole('article').last();
   const animatedText = section.locator('[data-scroll-text], [data-motion-pending]');
-  await expect(card.getByRole('heading')).toHaveCSS('text-align', 'center');
+  await expect(card.getByRole('heading')).toHaveCSS('text-align', 'left');
+  await expect(section.locator('img')).toHaveCount(0);
   await expect(card.locator('.portfolio-project-summary')).toHaveCSS('text-align', /^(start|left)$/);
   await expect(animatedText).toHaveCount(0);
   await card.scrollIntoViewIfNeeded();
@@ -91,24 +92,22 @@ for (const scenario of [
 }
 
 for (const title of ['FRP Material Strength Analyser', 'UAV Crack Detection System']) {
-  test(`${title}: certificate toggles using keyboard without resizing card`, async ({ page }) => {
+  test(`${title}: certificate disclosure works with the keyboard`, async ({ page }) => {
     await visit(page, '/portfolio');
     const card = page.getByRole('article', { name: title, exact: true });
-    const button = card.getByRole('button');
-    await button.scrollIntoViewIfNeeded();
-    const before = await card.boundingBox();
-    await button.focus();
+    const certificate = card.locator('.portfolio-project-certificate');
+    const control = certificate.locator('summary');
+    const panel = certificate.locator('.portfolio-certificate-panel');
+    await control.scrollIntoViewIfNeeded();
+    await expect(panel).toBeHidden();
+    await control.focus();
     await page.keyboard.press('Enter');
-    await expect(button).toHaveAttribute('aria-pressed', 'true');
-    await expect(card.locator('.portfolio-project-certificate')).toHaveAttribute('aria-hidden', 'false');
-    // Supports the current honest placeholder and future real certificates.
-    await expect(card.locator('.portfolio-project-certificate')).not.toBeEmpty();
-    const after = await card.boundingBox();
-    expect(Math.abs(after.height - before.height)).toBeLessThanOrEqual(2);
-    expect(Math.abs(after.width - before.width)).toBeLessThanOrEqual(2);
+    await expect(certificate).toHaveAttribute('open', '');
+    await expect(panel).toBeVisible();
+    await expect(panel).not.toBeEmpty();
     await page.keyboard.press('Space');
-    await expect(button).toHaveAttribute('aria-pressed', 'false');
-    await expect(card.locator('.portfolio-project-certificate')).toHaveAttribute('aria-hidden', 'true');
+    await expect(certificate).not.toHaveAttribute('open');
+    await expect(panel).toBeHidden();
   });
 }
 

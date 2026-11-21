@@ -72,20 +72,19 @@ artifacts/         # Ignored verification output
 ## Editing portfolio cards
 
 Edit the `projects` array in `src/scripts/media/portfolio-cards.js` to update each
-card's title, organization, category, image, summary, description and focus tags.
-The summary and full description are always visible on each card.
-FRP and UAV include a Certificate button that swaps the artwork in place. Set
-their `certificate.image` to a certificate image filename under
-`public/images/projects/` (and register its URL in `config/routes.json`), or to a
-direct image URL. While it is unset, the certificate panel explicitly says it
-has not been added. Certificate images use `object-fit: contain` to stay uncropped.
-Optional `role`, `tools` (an array of names), `year`, `demoUrl` and `sourceUrl` fields
-appear when supplied. `caseStudyUrl` links to an existing project page. Leave links
-unset until their destinations are available. Card styles are in
+card's title, organization, category, summary, description and focus tags.
+The listing uses text-only project rows with titles and summaries on the left
+and technical details on the right. Below 900px, these columns stack. Project
+artwork is not rendered. The page introduction lives in the same script.
+FRP and UAV include a native Certificate disclosure. Set `certificate.image`
+to a certificate image filename under `public/images/projects/` (and register
+its URL in `config/routes.json`), or a direct image URL. While unset, opening
+the disclosure says the certificate has not been added. Certificates retain
+their original aspect ratio.
+Optional `role`, `tools` (an array of names), `year`, `demoUrl` and `sourceUrl`
+fields appear when supplied. `caseStudyUrl` links to an existing project page.
+Leave links unset until their destinations are available. Card styles are in
 `src/styles/pages/portfolio/portfolio-cards.css`.
-At 1024px and above, project cards appear two per row with the images on the
-outside and the descriptions in the middle. On narrower screens, each card's
-image sits above its description. Below 700px, the listing uses one card per row.
 
 ## Validation
 

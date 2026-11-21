@@ -56,7 +56,7 @@ try {
   };
   const navigate = async path => { await call('Page.navigate', {url: 'http://127.0.0.1:8080' + path}); await settle(path); };
   const tap = async selector => {
-    const point = await evaluate(`(() => { const el = document.querySelector(${JSON.stringify(selector)}); if (!el) throw Error('Missing control: '+${JSON.stringify(selector)}); el.scrollIntoView({block:'center'}); const r=el.getBoundingClientRect(); return {x:r.x+r.width/2,y:r.y+r.height/2}; })()`);
+    const point = await evaluate(`(() => { const el = document.querySelector(${JSON.stringify(selector)}); if (!el) throw Error('Missing control: '+${JSON.stringify(selector)}); el.scrollIntoView({block:'center',behavior:'instant'}); const r=el.getBoundingClientRect(); return {x:r.x+r.width/2,y:r.y+r.height/2}; })()`);
     await call('Input.dispatchTouchEvent', {type: 'touchStart', touchPoints: [point]});
     await call('Input.dispatchTouchEvent', {type: 'touchEnd', touchPoints: []});
     await pause(350);
@@ -74,26 +74,22 @@ try {
     await navigate('/portfolio');
     if (await evaluate(`document.querySelectorAll('.portfolio-certificate-button').length`) !== 2) throw Error('Certificate buttons must only appear on FRP and UAV');
     for (const id of ['foome','edbost']) {
-      const button = '#project-certificate-'+id;
-      const control = `[aria-controls="project-certificate-${id}"]`;
-      await evaluate(`document.querySelector(${JSON.stringify(control)}).scrollIntoView({block:'center'})`);
-      await pause(800);
-      const before = await evaluate(`(() => {const r=document.querySelector(${JSON.stringify(button)}).closest('article').getBoundingClientRect();return {width:r.width,height:r.height};})()`);
-      await tap(control); await pause(650);
-      const shown = await evaluate(`(() => {const panel=document.querySelector(${JSON.stringify(button)}), control=document.querySelector(${JSON.stringify(control)}), media=panel.parentElement, bounds=media.closest('article').getBoundingClientRect(); return {pressed:control.getAttribute('aria-pressed'),visible:panel.getAttribute('aria-hidden'),opacity:getComputedStyle(panel).opacity,swapped:media.hasAttribute('data-certificate-visible'),pending:!!panel.querySelector('.portfolio-certificate-pending'),width:bounds.width,height:bounds.height};})()`);
-      if (shown.pressed!=='true'||shown.visible!=='false'||shown.opacity!=='1'||!shown.swapped) throw Error('Certificate did not swap in: '+JSON.stringify(shown));
-      if (Math.abs(shown.height-before.height)>1 || Math.abs(shown.width-before.width)>1) throw Error('Image swap changed card dimensions');
-      report.checks.push({name:'swap-'+id+'-'+width,...shown});
+      const panel = '#project-certificate-'+id;
+      const control = panel+' > summary';
+      await tap(control);
+      const shown = await evaluate(`(() => {const panel=document.querySelector(${JSON.stringify(panel)}); return {open:panel.open,text:panel.querySelector('.portfolio-certificate-panel').innerText};})()`);
+      if (!shown.open || !shown.text) throw Error('Certificate did not open: '+JSON.stringify(shown));
+      report.checks.push({name:'disclosure-'+id+'-'+width,...shown});
       if (id==='foome') await capture('frp-certificate-'+width);
-      await tap(control); await pause(650);
-      if (await evaluate(`document.querySelector(${JSON.stringify(control)}).getAttribute('aria-pressed')`)!=='false') throw Error('Project artwork did not return');
+      await tap(control);
+      if (await evaluate(`document.querySelector(${JSON.stringify(panel)}).open`)) throw Error('Certificate did not close');
     }
   }
   await call('Emulation.setEmulatedMedia', {features:[{name:'prefers-reduced-motion',value:'reduce'}]});
   await navigate('/portfolio');
   const transitions = await evaluate(`getComputedStyle(document.querySelector('.portfolio-project-certificate')).transitionDuration`);
   if (transitions!=='0s') throw Error('Reduced motion still animates: '+transitions);
-  console.log('Passed certificate swaps, reverse swaps, stable card sizes, mobile/desktop, and reduced motion.');
+  console.log('Passed certificate disclosures, mobile/desktop, and reduced motion.');
 
 } catch (error) {
   process.exitCode = 1;

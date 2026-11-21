@@ -6,7 +6,7 @@
   },
   "/about": {
     "status": 200,
-    "sha256": "8bdb0630e6abb69be9feead369de9e943dfd1ebe3527971bf966a58348467919",
+    "sha256": "90b4e669a92684e3d3c16db5a0880942798fff94ec0578e1c0ee9ec96f996d96",
     "type": "text/html"
   },
   "/portfolio": {
@@ -31,12 +31,12 @@
   },
   "/about-click.html": {
     "status": 200,
-    "sha256": "8bdb0630e6abb69be9feead369de9e943dfd1ebe3527971bf966a58348467919",
+    "sha256": "90b4e669a92684e3d3c16db5a0880942798fff94ec0578e1c0ee9ec96f996d96",
     "type": "text/html"
   },
   "/about-loaded.html": {
     "status": 200,
-    "sha256": "8bdb0630e6abb69be9feead369de9e943dfd1ebe3527971bf966a58348467919",
+    "sha256": "90b4e669a92684e3d3c16db5a0880942798fff94ec0578e1c0ee9ec96f996d96",
     "type": "text/html"
   },
   "/budget-selected.html": {
@@ -66,7 +66,7 @@
   },
   "/local-customizations.css": {
     "status": 200,
-    "sha256": "8c52349a7582047876b1cc94215726bacc9db0cde8c8a890264f199ad7149af7",
+    "sha256": "985f2d787bb148aec994d697b721c780b7e1788fe2448c6b377e2837e530c6a5",
     "type": "text/css"
   },
   "/mobile-contact.html": {
@@ -146,7 +146,7 @@
   },
   "/skills.css": {
     "status": 200,
-    "sha256": "74f7ed9805344be96bfe71c2ce048626c307bcb67b1538c55e533ac963925d8e",
+    "sha256": "69106823087fa8369007cdaa5c59d6a0ecad72782ed4a69c3c1e61d91552aa9c",
     "type": "text/css"
   },
   "/skills.html": {
@@ -156,17 +156,17 @@
   },
   "/theme-sync.js": {
     "status": 200,
-    "sha256": "44574a243b08b6a5ddb2c90adbf3682721b29662422efe801e5d401b36c3b3d2",
+    "sha256": "442ea2384e21e5ababd9ccd5e5b8d9013012db031abdb4fdb98120c9fbd939cf",
     "type": "text/javascript"
   },
   "/before-portrait-replacement/about-click.html": {
     "status": 200,
-    "sha256": "8bdb0630e6abb69be9feead369de9e943dfd1ebe3527971bf966a58348467919",
+    "sha256": "90b4e669a92684e3d3c16db5a0880942798fff94ec0578e1c0ee9ec96f996d96",
     "type": "text/html"
   },
   "/before-portrait-replacement/about-loaded.html": {
     "status": 200,
-    "sha256": "8bdb0630e6abb69be9feead369de9e943dfd1ebe3527971bf966a58348467919",
+    "sha256": "90b4e669a92684e3d3c16db5a0880942798fff94ec0578e1c0ee9ec96f996d96",
     "type": "text/html"
   },
   "/before-portrait-replacement/mobile-home.html": {
