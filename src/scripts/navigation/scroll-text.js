@@ -9,7 +9,7 @@
     '.skills-main p:not(.page-label)', '.skills-proof h2', '.skills-proof h3',
     '.skill-row h2', '.skill-tags li > span',
     '.case-main h2', '.case-main h3', '.case-main p:not(.case-index):not(.case-eyebrow)',
-    '.contact-details-intro', '.email-draft-note', '.home-specialization p'
+    '.contact-details-intro', '.email-draft-note'
   ].join(',');
   const titleSelector = '#about-title, .case-hero h1';
   const nativeSelector = '.framer-TlDBu h1, main [data-framer-name="Title"] h1, .skills-intro h1';

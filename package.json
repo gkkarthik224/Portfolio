@@ -1,26 +1,12 @@
 {
-  "name": "karthik-portfolio-automation",
+  "name": "karthik-portfolio",
   "private": true,
   "type": "module",
   "engines": { "node": ">=22.16" },
   "scripts": {
     "site:build": "node scripts/build-static.mjs",
     "content:build": "node scripts/build-case-studies.mjs",
-    "test": "node --env-file-if-exists=.env automation/run.mjs test",
-    "test:smoke": "node --env-file-if-exists=.env automation/run.mjs smoke",
-    "test:headed": "node --env-file-if-exists=.env automation/run.mjs headed",
-    "test:ui": "node --env-file-if-exists=.env automation/run.mjs ui",
-    "test:unit": "node --test automation/unit/*.test.mjs",
-    "qa:audit": "node --env-file-if-exists=.env automation/run.mjs audit",
-    "qa:ai": "node --env-file-if-exists=.env automation/run.mjs ai",
-    "qa:all": "node --env-file-if-exists=.env automation/run.mjs all",
-    "qa:report": "node --env-file-if-exists=.env automation/run.mjs report",
-    "browsers:install": "node automation/run.mjs install"
-  },
-  "devDependencies": {
-    "@axe-core/playwright": "4.14.0",
-    "@playwright/test": "1.65.1",
-    "openai": "7.60.0",
-    "zod": "4.6.7"
+    "test": "python -m unittest discover -s tests -v",
+    "analytics": "node scripts/code-metrics.mjs"
   }
 }

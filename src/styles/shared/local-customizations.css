@@ -10,21 +10,6 @@
   text-decoration: none;
 }
 .project-return-link:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-.home-specialization {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  right: 24px;
-  z-index: 5;
-  margin: 0;
-  text-align: center;
-  font-family: PortfolioHeader, Arial, sans-serif;
-  font-size: clamp(12px, 1.3vw, 16px);
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: -.02em;
-}
-.home-specialization p { margin: 0; }
 /* The original template screenshots have been removed from project details. */
 .framer-1ilzg0z[data-framer-name="Images"],
 .framer-1r0crxv[data-framer-name="Images"],
@@ -613,15 +598,6 @@ html[framestack-theme="dark"] .portfolio-theme-switch > span { transform: transl
   .portfolio-theme-switch {
     top: calc(16px + env(safe-area-inset-top, 0px));
     right: max(16px, env(safe-area-inset-right, 0px));
-  }
-  .home-specialization {
-    top: 16px;
-    left: 16px;
-    right: 112px;
-    display: flex;
-    align-items: center;
-    min-height: 40px;
-    text-align: left;
   }
   .cell-top-menu {
     left: 16px;

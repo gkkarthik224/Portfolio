@@ -1,4 +1,0 @@
-Tool: built-in ImageGen. Transparent background: true.
-Edit target: portrait-custom.jpg.
-
-Use case: background-extraction. Edit target: the supplied black-and-white photographic portrait. Remove ONLY the solid black backdrop around the person, making it genuinely transparent with a clean alpha channel. Preserve the exact person's identity, facial features, expression, gaze to the right, hair, natural hair wisps, dark jacket, shirt, shoulders, pose, grayscale tones, original lighting and original composition. Carefully distinguish the dark clothing and hair from the black background; keep the clothing opaque, not transparent. Do not retouch, relight, regenerate the face, add outlines, add shadows, add text or add new objects. Keep the original portrait canvas and framing. Output a transparent PNG cutout suitable for compositing on light and dark website surfaces. Save the finished image and report the local output path so it can be installed in the portfolio.

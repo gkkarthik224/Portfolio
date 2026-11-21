@@ -24,11 +24,11 @@ for (const study of studies) {
   <meta property="og:title" content="${escape(study.title)} | Karthik Krishna">
   <meta property="og:description" content="${escape(study.summary)}">
   <link rel="icon" href="/favicon.svg">
-  <link rel="stylesheet" href="/page-motion.css?v=2">
+  <link rel="stylesheet" href="/page-motion.css?v=3">
   <link rel="stylesheet" href="/local-customizations.css?v=41">
   <link rel="stylesheet" href="/case-study.css?v=1">
   <script src="/smooth-scroll.js?v=1"></script>
-  <script src="/page-transitions.js?v=4"></script>
+  <script src="/page-transitions.js?v=5"></script>
   <script src="/theme-sync.js?v=1"></script>
   <script src="/dot-cursor.js?v=1" defer></script>
   <script src="/skills-page.js?v=10" defer></script>

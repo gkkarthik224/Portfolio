@@ -10,7 +10,6 @@
     "/portfolio/defect-management": "defect-case-study.html"
   },
   "files": {
-    "about-motion.js": "src/scripts/navigation/scroll-text.js",
     "scroll-text.js": "src/scripts/navigation/scroll-text.js",
     "about-loaded.html": "src/pages/about/index.html",
     "contact-loaded.html": "src/pages/contact/index.html",
@@ -19,14 +18,12 @@
     "local-customizations.css": "src/styles/shared/local-customizations.css",
     "page-transitions.js": "src/scripts/navigation/page-transitions.js",
     "portfolio-loaded.html": "src/pages/portfolio/index.html",
-    "portrait-custom.jpg": "public/images/portrait/portrait-custom.jpg",
     "portrait-transparent.png": "public/images/portrait/portrait-transparent.png",
     "portrait.jpg": "public/images/portrait/portrait.jpg",
     "project-loaded.html": "src/pages/projects/travel-easy/index.html",
     "procurement-case-study.html": "src/pages/projects/procurement-erp/index.html",
     "defect-case-study.html": "src/pages/projects/defect-management/index.html",
     "case-study.css": "src/styles/pages/projects/case-study.css",
-    "skills-entrance.css": "src/styles/pages/skills/skills-entrance.css",
     "skills-navigation.js": "src/scripts/navigation/skills-navigation.js",
     "skills-page.js": "src/scripts/skills/skills-page.js",
     "skills.css": "src/styles/pages/skills/skills.css",
@@ -121,7 +118,6 @@
     "skill-icons/github-copilot.svg": "public/images/skills/github-copilot.svg",
     "skill-icons/amazon-bedrock.png": "public/images/skills/amazon-bedrock.png",
     "skill-icons/helicone.svg": "public/images/skills/helicone.svg",
-    "skills-motion.js": "src/scripts/skills/skills-motion.js",
     "contact.css": "src/styles/pages/contact/contact.css",
     "email-draft.js": "src/scripts/contact/email-draft.js",
     "favicon.svg": "public/images/favicon.svg"

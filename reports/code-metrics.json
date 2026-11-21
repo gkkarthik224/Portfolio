@@ -1,0 +1,1010 @@
+{
+  "generatedAtUtc": "2026-11-21T19:43:40.631Z",
+  "methodology": "Physical lines in tracked/unignored source files. Code includes HTML, CSS, JS/MJS and Python. Config, documentation and SVG are outside code totals. Reports, dependencies, build output and artifacts are excluded. Minified runtime is counted as stored, not pretty-printed.",
+  "before": {
+    "files": 166,
+    "bytes": 15974782,
+    "textLines": 8833,
+    "codeFiles": 99,
+    "codeLines": 6947,
+    "codeBytes": 5027407,
+    "groups": {
+      "Build, preview and tests": {
+        "files": 34,
+        "lines": 2452,
+        "bytes": 158504
+      },
+      "Bundled runtime": {
+        "files": 38,
+        "lines": 1031,
+        "bytes": 4181846
+      },
+      "Application source": {
+        "files": 24,
+        "lines": 3227,
+        "bytes": 664576
+      },
+      "Generated case studies": {
+        "files": 3,
+        "lines": 237,
+        "bytes": 22481
+      }
+    },
+    "byLanguage": {
+      "Python": {
+        "files": 9,
+        "lines": 380,
+        "bytes": 15909
+      },
+      "JavaScript": {
+        "files": 74,
+        "lines": 4094,
+        "bytes": 4383838
+      },
+      "HTML": {
+        "files": 8,
+        "lines": 1071,
+        "bytes": 560356
+      },
+      "CSS": {
+        "files": 8,
+        "lines": 1402,
+        "bytes": 67304
+      }
+    }
+  },
+  "reduction": {
+    "files": 36,
+    "bytes": 336701,
+    "codeLines": 2072,
+    "textLines": 2769
+  },
+  "current": {
+    "files": 130,
+    "bytes": 15638081,
+    "textLines": 6064,
+    "codeFiles": 71,
+    "codeLines": 4875,
+    "codeBytes": 4889256,
+    "groups": {
+      "Bundled runtime": {
+        "files": 38,
+        "lines": 1031,
+        "bytes": 4181846
+      },
+      "Build, preview and tests": {
+        "files": 8,
+        "lines": 448,
+        "bytes": 22450
+      },
+      "Application source": {
+        "files": 22,
+        "lines": 3159,
+        "bytes": 662479
+      },
+      "Generated case studies": {
+        "files": 3,
+        "lines": 237,
+        "bytes": 22481
+      }
+    },
+    "byLanguage": {
+      "JavaScript": {
+        "files": 51,
+        "lines": 2204,
+        "bytes": 4252747
+      },
+      "Python": {
+        "files": 5,
+        "lines": 223,
+        "bytes": 9454
+      },
+      "HTML": {
+        "files": 8,
+        "lines": 1071,
+        "bytes": 560356
+      },
+      "CSS": {
+        "files": 7,
+        "lines": 1377,
+        "bytes": 66699
+      }
+    }
+  },
+  "removed": [
+    {
+      "path": ".env.example",
+      "bytes": 466,
+      "lines": 12
+    },
+    {
+      "path": ".openai/hosting.json",
+      "bytes": 106,
+      "lines": 6
+    },
+    {
+      "path": "archive/research/portrait-edit-prompt.txt",
+      "bytes": 973,
+      "lines": 4
+    },
+    {
+      "path": "automation/README.md",
+      "bytes": 8696,
+      "lines": 191
+    },
+    {
+      "path": "automation/__init__.py",
+      "bytes": 37,
+      "lines": 1
+    },
+    {
+      "path": "automation/lib/ai-review.mjs",
+      "bytes": 5706,
+      "lines": 82
+    },
+    {
+      "path": "automation/lib/page.mjs",
+      "bytes": 2988,
+      "lines": 53
+    },
+    {
+      "path": "automation/lib/quality.mjs",
+      "bytes": 4059,
+      "lines": 37
+    },
+    {
+      "path": "automation/lib/settings.mjs",
+      "bytes": 843,
+      "lines": 13
+    },
+    {
+      "path": "automation/run.mjs",
+      "bytes": 2117,
+      "lines": 39
+    },
+    {
+      "path": "automation/serve.py",
+      "bytes": 1151,
+      "lines": 36
+    },
+    {
+      "path": "automation/specs/audit.spec.mjs",
+      "bytes": 6253,
+      "lines": 92
+    },
+    {
+      "path": "automation/specs/journeys.spec.mjs",
+      "bytes": 12113,
+      "lines": 230
+    },
+    {
+      "path": "automation/specs/pages.spec.mjs",
+      "bytes": 2845,
+      "lines": 41
+    },
+    {
+      "path": "automation/specs/responsive.spec.mjs",
+      "bytes": 1246,
+      "lines": 23
+    },
+    {
+      "path": "automation/unit/ai-review.test.mjs",
+      "bytes": 4137,
+      "lines": 57
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 4259,
+      "lines": 142
+    },
+    {
+      "path": "playwright.config.mjs",
+      "bytes": 1675,
+      "lines": 45
+    },
+    {
+      "path": "public/images/portrait/portrait-custom.jpg",
+      "bytes": 167921,
+      "lines": null
+    },
+    {
+      "path": "src/content/README.md",
+      "bytes": 1918,
+      "lines": 27
+    },
+    {
+      "path": "src/scripts/skills/skills-motion.js",
+      "bytes": 1466,
+      "lines": 43
+    },
+    {
+      "path": "src/styles/pages/skills/skills-entrance.css",
+      "bytes": 83,
+      "lines": 1
+    },
+    {
+      "path": "tests/about-layout-check.mjs",
+      "bytes": 8139,
+      "lines": 100
+    },
+    {
+      "path": "tests/about-scroll-check.mjs",
+      "bytes": 7791,
+      "lines": 102
+    },
+    {
+      "path": "tests/browser-smoke.mjs",
+      "bytes": 8621,
+      "lines": 116
+    },
+    {
+      "path": "tests/cell-menu-check.mjs",
+      "bytes": 8163,
+      "lines": 107
+    },
+    {
+      "path": "tests/contact-details-check.mjs",
+      "bytes": 6179,
+      "lines": 86
+    },
+    {
+      "path": "tests/contact-send-check.mjs",
+      "bytes": 3827,
+      "lines": 38
+    },
+    {
+      "path": "tests/fixtures/http-baseline.json",
+      "bytes": 6952,
+      "lines": 212
+    },
+    {
+      "path": "tests/glass-menu-check.mjs",
+      "bytes": 4762,
+      "lines": 73
+    },
+    {
+      "path": "tests/glass-seam-check.mjs",
+      "bytes": 10112,
+      "lines": 125
+    },
+    {
+      "path": "tests/page-motion-check.mjs",
+      "bytes": 8262,
+      "lines": 139
+    },
+    {
+      "path": "tests/project-certificates-check.mjs",
+      "bytes": 7828,
+      "lines": 110
+    },
+    {
+      "path": "tests/site-scroll-check.mjs",
+      "bytes": 7981,
+      "lines": 105
+    },
+    {
+      "path": "tests/skills-openai-motion.mjs",
+      "bytes": 7691,
+      "lines": 105
+    },
+    {
+      "path": "tests/test_http_contract.py",
+      "bytes": 2368,
+      "lines": 51
+    },
+    {
+      "path": "tests/test_page_bootstrap.py",
+      "bytes": 2497,
+      "lines": 56
+    },
+    {
+      "path": "tests/test_personal_content.py",
+      "bytes": 5837,
+      "lines": 126
+    }
+  ],
+  "largestFiles": [
+    {
+      "path": "public/runtime/google-H6SFY4F5.5HW9yzMR.mjs",
+      "bytes": 2605418,
+      "lines": 2
+    },
+    {
+      "path": "public/images/projects/iit-bombay-internship-certificate.jpeg",
+      "bytes": 1841334,
+      "lines": null
+    },
+    {
+      "path": "public/images/projects/procurement-erp.png",
+      "bytes": 1512870,
+      "lines": null
+    },
+    {
+      "path": "public/images/projects/auto-defect-management.png",
+      "bytes": 1476568,
+      "lines": null
+    },
+    {
+      "path": "public/images/projects/frp-material-strength.png",
+      "bytes": 1468666,
+      "lines": null
+    },
+    {
+      "path": "public/images/projects/ai-test-scripts.png",
+      "bytes": 1460580,
+      "lines": null
+    },
+    {
+      "path": "public/images/projects/uav-crack-detection.png",
+      "bytes": 1432046,
+      "lines": null
+    },
+    {
+      "path": "public/images/portrait/portrait-transparent.png",
+      "bytes": 1265337,
+      "lines": null
+    },
+    {
+      "path": "public/runtime/framer.CxK-iCVc.mjs",
+      "bytes": 509651,
+      "lines": 966
+    },
+    {
+      "path": "src/pages/home/index.html",
+      "bytes": 180823,
+      "lines": 220
+    }
+  ],
+  "files": [
+    {
+      "path": ".github/workflows/static.yml",
+      "bytes": 966,
+      "lines": 48
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 132,
+      "lines": 13
+    },
+    {
+      "path": "config/routes.json",
+      "bytes": 10572,
+      "lines": 143
+    },
+    {
+      "path": "package.json",
+      "bytes": 344,
+      "lines": 12
+    },
+    {
+      "path": "public/images/favicon.svg",
+      "bytes": 232,
+      "lines": 1
+    },
+    {
+      "path": "public/images/portrait/portrait-transparent.png",
+      "bytes": 1265337,
+      "lines": null
+    },
+    {
+      "path": "public/images/portrait/portrait.jpg",
+      "bytes": 167921,
+      "lines": null
+    },
+    {
+      "path": "public/images/projects/ai-test-scripts.png",
+      "bytes": 1460580,
+      "lines": null
+    },
+    {
+      "path": "public/images/projects/auto-defect-management.png",
+      "bytes": 1476568,
+      "lines": null
+    },
+    {
+      "path": "public/images/projects/frp-material-strength.png",
+      "bytes": 1468666,
+      "lines": null
+    },
+    {
+      "path": "public/images/projects/iit-bombay-internship-certificate.jpeg",
+      "bytes": 1841334,
+      "lines": null
+    },
+    {
+      "path": "public/images/projects/procurement-erp.png",
+      "bytes": 1512870,
+      "lines": null
+    },
+    {
+      "path": "public/images/projects/uav-crack-detection.png",
+      "bytes": 1432046,
+      "lines": null
+    },
+    {
+      "path": "public/images/skills/amazon-bedrock.png",
+      "bytes": 1904,
+      "lines": null
+    },
+    {
+      "path": "public/images/skills/amazon-s3.svg",
+      "bytes": 1389,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/AWS-LICENSE.txt",
+      "bytes": 11614,
+      "lines": 205
+    },
+    {
+      "path": "public/images/skills/bitbucket.svg",
+      "bytes": 778,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/CC0-1.0.txt",
+      "bytes": 6555,
+      "lines": 116
+    },
+    {
+      "path": "public/images/skills/claude-api.svg",
+      "bytes": 2047,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/docker.svg",
+      "bytes": 810,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/embeddings.svg",
+      "bytes": 414,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/erp-integration.svg",
+      "bytes": 361,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/fastapi.svg",
+      "bytes": 274,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/git.svg",
+      "bytes": 870,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/github-copilot.svg",
+      "bytes": 1669,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/github.svg",
+      "bytes": 858,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/Helicone-LICENSE.txt",
+      "bytes": 11341,
+      "lines": 201
+    },
+    {
+      "path": "public/images/skills/helicone.svg",
+      "bytes": 3450,
+      "lines": 18
+    },
+    {
+      "path": "public/images/skills/ISC-lucide.txt",
+      "bytes": 3208,
+      "lines": 43
+    },
+    {
+      "path": "public/images/skills/jira-integration.svg",
+      "bytes": 1033,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/keycloak.svg",
+      "bytes": 508,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/langchain.svg",
+      "bytes": 624,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/langgraph.svg",
+      "bytes": 224,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/mcp.svg",
+      "bytes": 954,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/n8n.svg",
+      "bytes": 1651,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/oauth-2-0.svg",
+      "bytes": 7216,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/ocr.svg",
+      "bytes": 329,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/opencv.svg",
+      "bytes": 4625,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/openid-connect.svg",
+      "bytes": 406,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/opentelemetry.svg",
+      "bytes": 1336,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/pandas.svg",
+      "bytes": 366,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/playwright.svg",
+      "bytes": 3880,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/postgresql.svg",
+      "bytes": 6752,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/pydantic.svg",
+      "bytes": 765,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/pytest.svg",
+      "bytes": 449,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/python.svg",
+      "bytes": 1329,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/qdrant.svg",
+      "bytes": 1381,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/rag-pipelines.svg",
+      "bytes": 341,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/redis.svg",
+      "bytes": 2689,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/rest-apis.svg",
+      "bytes": 353,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/semantic-search.svg",
+      "bytes": 270,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/sensetalk.svg",
+      "bytes": 331,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/SOURCES.json",
+      "bytes": 6358,
+      "lines": 193
+    },
+    {
+      "path": "public/images/skills/sqlalchemy.svg",
+      "bytes": 2475,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/typescript.svg",
+      "bytes": 1159,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/vlms.svg",
+      "bytes": 449,
+      "lines": 1
+    },
+    {
+      "path": "public/images/skills/webhooks.svg",
+      "bytes": 1958,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/69yexLcRbfADz8EzbSZeR6PUZKqUqk00OZd89Br42tA.CXRgT6Bx.mjs",
+      "bytes": 861,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/An5YGVIc1Q8pzZsXDpiCbJQw5Zdk15DZI12bvLZfrwE.CXW8OazJ.mjs",
+      "bytes": 155,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/AUvMS7tx6-dMOUBuiMr8yHJKe9t5ULgiVCcJs5hBpSo.dObCGW41.mjs",
+      "bytes": 635,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/avuvYYzgc.D9CuTYMU.mjs",
+      "bytes": 31100,
+      "lines": 7
+    },
+    {
+      "path": "public/runtime/eZzRnnvfO.BSrpa1dp.mjs",
+      "bytes": 3519,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/fontshare-PZLWRK4B.CuFl42Lb.mjs",
+      "bytes": 107738,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/fontshare-SXU5BGFE.DwUZJPwH.mjs",
+      "bytes": 7928,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/fontshare-TIA7QUPT.CjCmvCKY.mjs",
+      "bytes": 1981,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/framer-font-RD2SUPQH.BV4yRwNx.mjs",
+      "bytes": 27822,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/framer.CxK-iCVc.mjs",
+      "bytes": 509651,
+      "lines": 966
+    },
+    {
+      "path": "public/runtime/G59h8taEB.DSTyIEhv.mjs",
+      "bytes": 3527,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/google-EGNT223R.4Zga1324.mjs",
+      "bytes": 70641,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/google-H6SFY4F5.5HW9yzMR.mjs",
+      "bytes": 2605418,
+      "lines": 2
+    },
+    {
+      "path": "public/runtime/google-YSYBFRE6.BZ57zP5h.mjs",
+      "bytes": 34360,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/Jcz0wpBi_k_Z09wrENY6YxiC4Sk3CuoJLHluo4eog1o.DR9wzOdw.mjs",
+      "bytes": 40611,
+      "lines": 3
+    },
+    {
+      "path": "public/runtime/JJWcR2DPr_AcaWkR8y6h2btJ-wpYUHfkPye7uFuS8s0.CCO8iX3L.mjs",
+      "bytes": 28610,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/kSPWrUux9fGAdjunq6DsmN3HsC2CuDMLvsDSdsg-0m0.vPkVLwkY.mjs",
+      "bytes": 45584,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/ld7Mua5cUvOmzJMfGt6jRc2Mazs-jeuYyjmca81mypQ.D2wykQIp.mjs",
+      "bytes": 14903,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/LGQB5zs56gm8c-79VDdht0X31rx22QqjWwthvraWXoQ.D92uEyzC.mjs",
+      "bytes": 2128,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/motion.BRy-DDAI.mjs",
+      "bytes": 151379,
+      "lines": 9
+    },
+    {
+      "path": "public/runtime/NLZz2_xo1.D2qm85lJ.mjs",
+      "bytes": 6861,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/oe4pPCKFY.BNNR9kwn.mjs",
+      "bytes": 19238,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/PX9hIOIVM.BX2Qm98g.mjs",
+      "bytes": 19418,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/Q3cqLjG9PPuI7ee4M1WhKNzsCD0K1AWnqjUzdyGC_zA.Bh0RFGmE.mjs",
+      "bytes": 88774,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/rD0JqOcZx.BHXiiKgh.mjs",
+      "bytes": 74022,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/react.DwDJOhmk.mjs",
+      "bytes": 144614,
+      "lines": 8
+    },
+    {
+      "path": "public/runtime/rolldown-runtime.Dh6celcD.mjs",
+      "bytes": 629,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/script_main.CYlHGnGz.mjs",
+      "bytes": 37457,
+      "lines": 5
+    },
+    {
+      "path": "public/runtime/shared-lib.CYKt29O5.mjs",
+      "bytes": 20085,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/u5wov_j184VSr4XMasED_ColtTIJ0QD4ojg7dWomGgE.C8Y0f7ON.mjs",
+      "bytes": 863,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/UsLKbKwka.Dn5hR2xi.mjs",
+      "bytes": 3508,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/vDajAIZP7.BLJiflog.mjs",
+      "bytes": 3489,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/vFWxv8drZwqFvlrSeAtO53tW6QLZm2hJBXfk4xPsobA.CuIxwk0t.mjs",
+      "bytes": 857,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/vIq_pLnRiwWgmnEXGu7_oiSpSgu3gYyrgucQr06rnDY.D5Z19d3V.mjs",
+      "bytes": 854,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/XDXO7e3KiCdigPB9bIIlyBGhtkvn2vIOfmrMNRXubGU.CpBPGs7t.mjs",
+      "bytes": 51274,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/XMaNfRC46.x6wwux_A.mjs",
+      "bytes": 17002,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/y7bJqCu-Tw4sBfBDoDb2_8ADQ_EWTxrSnHIZkfSNMHE.Cg5IVOXS.mjs",
+      "bytes": 857,
+      "lines": 1
+    },
+    {
+      "path": "public/runtime/zdGnSmc2f.Ee-cGcPn.mjs",
+      "bytes": 3493,
+      "lines": 1
+    },
+    {
+      "path": "README.md",
+      "bytes": 2528,
+      "lines": 47
+    },
+    {
+      "path": "scripts/build-case-studies.mjs",
+      "bytes": 5966,
+      "lines": 94
+    },
+    {
+      "path": "scripts/build-static.mjs",
+      "bytes": 3291,
+      "lines": 60
+    },
+    {
+      "path": "scripts/code-metrics.mjs",
+      "bytes": 3739,
+      "lines": 71
+    },
+    {
+      "path": "server/__init__.py",
+      "bytes": 62,
+      "lines": 1
+    },
+    {
+      "path": "server/app.py",
+      "bytes": 1000,
+      "lines": 33
+    },
+    {
+      "path": "server/handlers.py",
+      "bytes": 1225,
+      "lines": 38
+    },
+    {
+      "path": "server/routing.py",
+      "bytes": 1732,
+      "lines": 38
+    },
+    {
+      "path": "src/content/case-studies.json",
+      "bytes": 10976,
+      "lines": 112
+    },
+    {
+      "path": "src/pages/about/index.html",
+      "bytes": 4551,
+      "lines": 66
+    },
+    {
+      "path": "src/pages/contact/index.html",
+      "bytes": 180084,
+      "lines": 244
+    },
+    {
+      "path": "src/pages/home/index.html",
+      "bytes": 180823,
+      "lines": 220
+    },
+    {
+      "path": "src/pages/portfolio/index.html",
+      "bytes": 158034,
+      "lines": 220
+    },
+    {
+      "path": "src/pages/projects/defect-management/index.html",
+      "bytes": 7468,
+      "lines": 79
+    },
+    {
+      "path": "src/pages/projects/procurement-erp/index.html",
+      "bytes": 7649,
+      "lines": 79
+    },
+    {
+      "path": "src/pages/projects/travel-easy/index.html",
+      "bytes": 7364,
+      "lines": 79
+    },
+    {
+      "path": "src/pages/skills/index.html",
+      "bytes": 14383,
+      "lines": 84
+    },
+    {
+      "path": "src/scripts/contact/email-draft.js",
+      "bytes": 4432,
+      "lines": 106
+    },
+    {
+      "path": "src/scripts/cursor/dot-cursor.js",
+      "bytes": 2231,
+      "lines": 54
+    },
+    {
+      "path": "src/scripts/identity/personal-layout.js",
+      "bytes": 2607,
+      "lines": 55
+    },
+    {
+      "path": "src/scripts/media/portfolio-cards.js",
+      "bytes": 9133,
+      "lines": 158
+    },
+    {
+      "path": "src/scripts/navigation/page-transitions.js",
+      "bytes": 8681,
+      "lines": 185
+    },
+    {
+      "path": "src/scripts/navigation/scroll-text.js",
+      "bytes": 8523,
+      "lines": 174
+    },
+    {
+      "path": "src/scripts/navigation/skills-navigation.js",
+      "bytes": 1640,
+      "lines": 31
+    },
+    {
+      "path": "src/scripts/navigation/smooth-scroll.js",
+      "bytes": 11669,
+      "lines": 2
+    },
+    {
+      "path": "src/scripts/skills/skills-page.js",
+      "bytes": 4590,
+      "lines": 98
+    },
+    {
+      "path": "src/scripts/theme/theme-sync.js",
+      "bytes": 4399,
+      "lines": 85
+    },
+    {
+      "path": "src/styles/pages/about/about.css",
+      "bytes": 5923,
+      "lines": 130
+    },
+    {
+      "path": "src/styles/pages/contact/contact.css",
+      "bytes": 4810,
+      "lines": 153
+    },
+    {
+      "path": "src/styles/pages/portfolio/portfolio-cards.css",
+      "bytes": 7785,
+      "lines": 124
+    },
+    {
+      "path": "src/styles/pages/projects/case-study.css",
+      "bytes": 5176,
+      "lines": 57
+    },
+    {
+      "path": "src/styles/pages/skills/skills.css",
+      "bytes": 16174,
+      "lines": 164
+    },
+    {
+      "path": "src/styles/shared/local-customizations.css",
+      "bytes": 22451,
+      "lines": 623
+    },
+    {
+      "path": "src/styles/shared/page-motion.css",
+      "bytes": 4380,
+      "lines": 126
+    },
+    {
+      "path": "tests/test_site.py",
+      "bytes": 5435,
+      "lines": 113
+    }
+  ]
+}
