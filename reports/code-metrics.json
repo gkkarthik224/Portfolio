@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-11-21T19:56:31.946Z",
+  "generatedAtUtc": "2026-11-21T20:11:00.911Z",
   "methodology": "Physical lines in tracked/unignored source files. Code includes HTML, CSS, JS/MJS and Python. Config, documentation and SVG are outside code totals. Reports, dependencies, build output and artifacts are excluded. Minified runtime is counted as stored, not pretty-printed.",
   "before": {
     "files": 166,
@@ -54,18 +54,18 @@
     }
   },
   "reduction": {
-    "files": 35,
-    "bytes": 330694,
-    "codeLines": 1918,
-    "textLines": 2613
+    "files": 34,
+    "bytes": 319449,
+    "codeLines": 1689,
+    "textLines": 2384
   },
   "current": {
-    "files": 131,
-    "bytes": 15644088,
-    "textLines": 6220,
-    "codeFiles": 72,
-    "codeLines": 5029,
-    "codeBytes": 4895199,
+    "files": 132,
+    "bytes": 15655333,
+    "textLines": 6449,
+    "codeFiles": 73,
+    "codeLines": 5258,
+    "codeBytes": 4906241,
     "groups": {
       "Bundled runtime": {
         "files": 38,
@@ -73,14 +73,14 @@
         "bytes": 4181846
       },
       "Build, preview and tests": {
-        "files": 9,
-        "lines": 590,
-        "bytes": 27955
+        "files": 10,
+        "lines": 754,
+        "bytes": 36040
       },
       "Application source": {
         "files": 22,
-        "lines": 3171,
-        "bytes": 662917
+        "lines": 3236,
+        "bytes": 665874
       },
       "Generated case studies": {
         "files": 3,
@@ -90,14 +90,14 @@
     },
     "byLanguage": {
       "JavaScript": {
-        "files": 52,
-        "lines": 2353,
-        "bytes": 4258390
+        "files": 53,
+        "lines": 2570,
+        "bytes": 4268611
       },
       "Python": {
         "files": 5,
-        "lines": 228,
-        "bytes": 9754
+        "lines": 233,
+        "bytes": 10053
       },
       "HTML": {
         "files": 8,
@@ -106,8 +106,8 @@
       },
       "CSS": {
         "files": 7,
-        "lines": 1377,
-        "bytes": 66699
+        "lines": 1384,
+        "bytes": 67221
       }
     }
   },
@@ -833,7 +833,7 @@
     },
     {
       "path": "README.md",
-      "bytes": 2528,
+      "bytes": 2731,
       "lines": 47
     },
     {
@@ -918,8 +918,8 @@
     },
     {
       "path": "src/scripts/contact/email-draft.js",
-      "bytes": 4432,
-      "lines": 106
+      "bytes": 6867,
+      "lines": 164
     },
     {
       "path": "src/scripts/cursor/dot-cursor.js",
@@ -973,8 +973,8 @@
     },
     {
       "path": "src/styles/pages/contact/contact.css",
-      "bytes": 4810,
-      "lines": 153
+      "bytes": 5332,
+      "lines": 160
     },
     {
       "path": "src/styles/pages/portfolio/portfolio-cards.css",
@@ -1002,14 +1002,19 @@
       "lines": 126
     },
     {
+      "path": "tests/contact-delivery.test.mjs",
+      "bytes": 7786,
+      "lines": 159
+    },
+    {
       "path": "tests/navigation-history.test.mjs",
       "bytes": 5205,
       "lines": 137
     },
     {
       "path": "tests/test_site.py",
-      "bytes": 5735,
-      "lines": 118
+      "bytes": 6034,
+      "lines": 123
     }
   ]
 }

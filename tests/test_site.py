@@ -113,6 +113,11 @@ class SiteTests(unittest.TestCase):
                                 capture_output=True, text=True, cwd=ROOT)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
+    def test_contact_delivery_lifecycle(self):
+        result = subprocess.run(['node', '--test', str(ROOT / 'tests/contact-delivery.test.mjs')],
+                                capture_output=True, text=True, cwd=ROOT)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
 
 if __name__ == '__main__':
     unittest.main()

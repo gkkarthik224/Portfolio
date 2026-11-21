@@ -82,6 +82,13 @@ html:not([data-page-ready]) .framer-1678973 { visibility: hidden; }
   cursor: pointer;
 }
 .contact-demo-submit:hover { background: color-mix(in srgb, currentColor 18%, transparent); }
+.contact-form-status { margin: 0; font-size: 14px; line-height: 1.65; overflow-wrap: anywhere; }
+.contact-form-status[hidden] { display: none; }
+.contact-form-status[data-state="success"] { color: #26744a; }
+.contact-form-status[data-state="error"] { color: #b03030; }
+[framestack-theme="dark"] .contact-form-status[data-state="success"] { color: #91d9ae; }
+[framestack-theme="dark"] .contact-form-status[data-state="error"] { color: #ffb3b3; }
+form[aria-busy="true"] button[type="submit"] { cursor: wait; opacity: .65; }
 .contact-tabs button:focus-visible,
 .contact-demo-panel :is(select, input, button):focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 .framer-zZ2n7 .framer-1nnq4af > .contact-details {

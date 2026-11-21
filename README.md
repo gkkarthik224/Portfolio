@@ -24,7 +24,7 @@ Open http://localhost:8080. To preview source files through the original URL map
 
 Register new public files in the URL manifest. Preserve runtime imports, script order and Framer layout classes. The referenced runtime bundles remain necessary even when a chunk is loaded only dynamically. Image attribution and license files are retained under `public/images/skills/`.
 
-The contact form prepares a local email draft for review; it does not send a message automatically. Employer and academic project details remain sanitized under NDA.
+The contact and demo forms submit through FormSubmit to `gkrishnakarthik2004@gmail.com`. The owner must activate FormSubmit once using its confirmation email before notification delivery is enabled. Submission errors preserve the visitor's message for retry. No email API keys are included in the site. Employer and academic project details remain sanitized under NDA.
 
 ## Validate
 
