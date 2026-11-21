@@ -609,7 +609,20 @@ html[framestack-theme="dark"] .portfolio-theme-switch > span { transform: transl
   .portfolio-theme-switch > span { transition: none; }
 }
 
-/* Shared shine for Skills and the Projects production-grade heading. */
+/* Shared word reveal and shine for the Skills and Projects headings. */
+:is(.skills-intro, .portfolio-projects-intro) .skills-text-word { display: inline-block; color: inherit; }
+html[data-page-loading] .skills-text-word { opacity: 0; }
+html[data-page-ready] .skills-text-word {
+  animation: skills-word-reveal 1400ms linear(0, 0.21287, 0.42347, 0.57824, 0.69147, 0.77430, 0.83489, 0.87922, 0.91164, 0.93536, 0.95272, 0.96541, 0.97470, 0.98149, 0.98646, 0.99009, 0.99275, 0.99470, 0.99612, 0.99716, 0.99792, 0.99848, 0.99889, 0.99919, 1) both;
+  animation-delay: calc(400ms + var(--word-index, 0) * 20ms);
+}
+@keyframes skills-word-reveal {
+  from { opacity: .001; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-page-ready] .skills-text-word { animation: none; opacity: 1; transform: none; }
+}
 @keyframes skills-glow-pulse {
   0%, 100% {
     text-shadow:

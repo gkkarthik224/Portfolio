@@ -81,10 +81,22 @@
   section.setAttribute('aria-labelledby', 'portfolio-projects-heading');
   const intro = el('header', 'portfolio-projects-intro');
   const headline = el('h1');
-  headline.append(
-    document.createTextNode('Applied AI, workflow orchestration, and backend systems—from prototype to '),
-    el('span', 'portfolio-title-glow', 'Production Grade')
-  );
+  let wordIndex = 0;
+  function appendWords(parent, text) {
+    for (const token of text.split(/(\s+)/)) {
+      if (!token) continue;
+      if (/^\s+$/.test(token)) parent.append(document.createTextNode(token));
+      else {
+        const word = el('span', 'skills-text-word', token);
+        word.style.setProperty('--word-index', wordIndex++);
+        parent.append(word);
+      }
+    }
+  }
+  appendWords(headline, 'Applied AI, workflow orchestration, and backend systems—from prototype to ');
+  const highlight = el('span', 'portfolio-title-glow');
+  appendWords(highlight, 'Production Grade');
+  headline.append(highlight);
   intro.append(headline, el('p', '', 'Test automation, document processing and engineering software.'));
   const header = el('div', 'portfolio-projects-header');
   header.append(el('h2', '', 'Selected work'), el('span', 'portfolio-projects-count', `${projects.length} projects`));

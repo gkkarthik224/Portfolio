@@ -19,6 +19,7 @@
     "page-transitions.js": "src/scripts/navigation/page-transitions.js",
     "portfolio-loaded.html": "src/pages/portfolio/index.html",
     "portrait-transparent.png": "public/images/portrait/portrait-transparent.png",
+    "portrait-color.png": "public/images/portrait/portrait-color.png",
     "portrait.jpg": "public/images/portrait/portrait.jpg",
     "project-loaded.html": "src/pages/projects/travel-easy/index.html",
     "procurement-case-study.html": "src/pages/projects/procurement-erp/index.html",

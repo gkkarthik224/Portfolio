@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-11-21T20:17:39.671Z",
+  "generatedAtUtc": "2026-11-21T20:32:29.859Z",
   "methodology": "Physical lines in tracked/unignored source files. Code includes HTML, CSS, JS/MJS and Python. Config, documentation and SVG are outside code totals. Reports, dependencies, build output and artifacts are excluded. Minified runtime is counted as stored, not pretty-printed.",
   "before": {
     "files": 166,
@@ -54,18 +54,18 @@
     }
   },
   "reduction": {
-    "files": 34,
-    "bytes": 318833,
-    "codeLines": 1687,
-    "textLines": 2380
+    "files": 33,
+    "bytes": -1591899,
+    "codeLines": 1675,
+    "textLines": 2367
   },
   "current": {
-    "files": 132,
-    "bytes": 15655949,
-    "textLines": 6453,
+    "files": 133,
+    "bytes": 17566681,
+    "textLines": 6466,
     "codeFiles": 73,
-    "codeLines": 5260,
-    "codeBytes": 4906530,
+    "codeLines": 5272,
+    "codeBytes": 4906962,
     "groups": {
       "Bundled runtime": {
         "files": 38,
@@ -79,8 +79,8 @@
       },
       "Application source": {
         "files": 22,
-        "lines": 3236,
-        "bytes": 665874
+        "lines": 3248,
+        "bytes": 666306
       },
       "Generated case studies": {
         "files": 3,
@@ -91,8 +91,8 @@
     "byLanguage": {
       "JavaScript": {
         "files": 53,
-        "lines": 2572,
-        "bytes": 4268900
+        "lines": 2584,
+        "bytes": 4269351
       },
       "Python": {
         "files": 5,
@@ -107,7 +107,7 @@
       "CSS": {
         "files": 7,
         "lines": 1384,
-        "bytes": 67221
+        "bytes": 67202
       }
     }
   },
@@ -310,6 +310,11 @@
       "lines": 2
     },
     {
+      "path": "public/images/portrait/portrait-color.png",
+      "bytes": 1910228,
+      "lines": null
+    },
+    {
       "path": "public/images/projects/iit-bombay-internship-certificate.jpeg",
       "bytes": 1841334,
       "lines": null
@@ -348,11 +353,6 @@
       "path": "public/runtime/framer.CxK-iCVc.mjs",
       "bytes": 509651,
       "lines": 966
-    },
-    {
-      "path": "src/pages/home/index.html",
-      "bytes": 180823,
-      "lines": 220
     }
   ],
   "files": [
@@ -368,8 +368,8 @@
     },
     {
       "path": "config/routes.json",
-      "bytes": 10572,
-      "lines": 143
+      "bytes": 10644,
+      "lines": 144
     },
     {
       "path": "package.json",
@@ -380,6 +380,11 @@
       "path": "public/images/favicon.svg",
       "bytes": 232,
       "lines": 1
+    },
+    {
+      "path": "public/images/portrait/portrait-color.png",
+      "bytes": 1910228,
+      "lines": null
     },
     {
       "path": "public/images/portrait/portrait-transparent.png",
@@ -933,8 +938,8 @@
     },
     {
       "path": "src/scripts/media/portfolio-cards.js",
-      "bytes": 9133,
-      "lines": 158
+      "bytes": 9584,
+      "lines": 170
     },
     {
       "path": "src/scripts/navigation/page-transitions.js",
@@ -988,13 +993,13 @@
     },
     {
       "path": "src/styles/pages/skills/skills.css",
-      "bytes": 16174,
-      "lines": 164
+      "bytes": 15334,
+      "lines": 151
     },
     {
       "path": "src/styles/shared/local-customizations.css",
-      "bytes": 22451,
-      "lines": 623
+      "bytes": 23272,
+      "lines": 636
     },
     {
       "path": "src/styles/shared/page-motion.css",
