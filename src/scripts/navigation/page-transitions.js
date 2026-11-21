@@ -8,7 +8,7 @@
   const active = new Set();
   const seen = new WeakSet();
   const pending = new Set();
-  let ready = false, leaving = false, exitTimer, observer, loader;
+  let ready = false, leaving = false, exitTimer, exitAnimation, observer, loader;
   let scroller, frame;
   function stopScrolling() {
     cancelAnimationFrame(frame);
@@ -153,21 +153,33 @@
     if (preference.matches) { location.assign(url.href); return; }
     root.setAttribute('data-page-leaving', '');
     // Fade only: moving the entire page would rebase fixed navigation and glass.
-    animate(document.querySelector('main') || document.body, [{opacity: 1}, {opacity: 0}], {duration: 180, fill: 'forwards'});
+    // Keep this reference after it finishes: fill: forwards still hides main,
+    // even after animate() removes it from the running-animation set.
+    exitAnimation = animate(document.querySelector('main') || document.body, [{opacity: 1}, {opacity: 0}], {duration: 180, fill: 'forwards'});
     exitTimer = setTimeout(() => location.assign(url.href), Math.max(180, menuDuration));
   }, true);
-  window.addEventListener('pageshow', event => {
-    if (!event.persisted) return;
+  function resetExit() {
     clearTimeout(exitTimer);
-    active.forEach(animation => animation.cancel());
+    exitTimer = undefined;
+    exitAnimation?.cancel();
+    exitAnimation = undefined;
     leaving = false;
     root.removeAttribute('data-page-leaving');
+  }
+  window.addEventListener('pageshow', event => {
+    if (!event.persisted) return;
+    resetExit();
+    active.forEach(animation => animation.cancel());
     finish();
     root.removeAttribute('data-page-loading');
     startScrolling();
     collect();
   });
-  window.addEventListener('pagehide', stopScrolling);
+  window.addEventListener('pagehide', () => {
+    // Store a visible snapshot for desktop and mobile back/forward caches.
+    resetExit();
+    stopScrolling();
+  });
   document.addEventListener('visibilitychange', () => {
     stopScrolling();
     if (!document.hidden && ready) startScrolling();

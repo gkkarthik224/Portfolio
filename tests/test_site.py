@@ -108,6 +108,11 @@ class SiteTests(unittest.TestCase):
             result = subprocess.run(['node', '--check', str(file)], capture_output=True, text=True)
             self.assertEqual(result.returncode, 0, result.stderr)
 
+    def test_browser_history_lifecycle(self):
+        result = subprocess.run(['node', '--test', str(ROOT / 'tests/navigation-history.test.mjs')],
+                                capture_output=True, text=True, cwd=ROOT)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
 
 if __name__ == '__main__':
     unittest.main()

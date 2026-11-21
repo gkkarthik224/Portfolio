@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-11-21T19:45:39.756Z",
+  "generatedAtUtc": "2026-11-21T19:56:31.946Z",
   "methodology": "Physical lines in tracked/unignored source files. Code includes HTML, CSS, JS/MJS and Python. Config, documentation and SVG are outside code totals. Reports, dependencies, build output and artifacts are excluded. Minified runtime is counted as stored, not pretty-printed.",
   "before": {
     "files": 166,
@@ -54,18 +54,18 @@
     }
   },
   "reduction": {
-    "files": 36,
-    "bytes": 336637,
-    "codeLines": 2072,
-    "textLines": 2767
+    "files": 35,
+    "bytes": 330694,
+    "codeLines": 1918,
+    "textLines": 2613
   },
   "current": {
-    "files": 130,
-    "bytes": 15638145,
-    "textLines": 6066,
-    "codeFiles": 71,
-    "codeLines": 4875,
-    "codeBytes": 4889256,
+    "files": 131,
+    "bytes": 15644088,
+    "textLines": 6220,
+    "codeFiles": 72,
+    "codeLines": 5029,
+    "codeBytes": 4895199,
     "groups": {
       "Bundled runtime": {
         "files": 38,
@@ -73,14 +73,14 @@
         "bytes": 4181846
       },
       "Build, preview and tests": {
-        "files": 8,
-        "lines": 448,
-        "bytes": 22450
+        "files": 9,
+        "lines": 590,
+        "bytes": 27955
       },
       "Application source": {
         "files": 22,
-        "lines": 3159,
-        "bytes": 662479
+        "lines": 3171,
+        "bytes": 662917
       },
       "Generated case studies": {
         "files": 3,
@@ -90,14 +90,14 @@
     },
     "byLanguage": {
       "JavaScript": {
-        "files": 51,
-        "lines": 2204,
-        "bytes": 4252747
+        "files": 52,
+        "lines": 2353,
+        "bytes": 4258390
       },
       "Python": {
         "files": 5,
-        "lines": 223,
-        "bytes": 9454
+        "lines": 228,
+        "bytes": 9754
       },
       "HTML": {
         "files": 8,
@@ -938,8 +938,8 @@
     },
     {
       "path": "src/scripts/navigation/page-transitions.js",
-      "bytes": 8681,
-      "lines": 185
+      "bytes": 9119,
+      "lines": 197
     },
     {
       "path": "src/scripts/navigation/scroll-text.js",
@@ -1002,9 +1002,14 @@
       "lines": 126
     },
     {
+      "path": "tests/navigation-history.test.mjs",
+      "bytes": 5205,
+      "lines": 137
+    },
+    {
       "path": "tests/test_site.py",
-      "bytes": 5435,
-      "lines": 113
+      "bytes": 5735,
+      "lines": 118
     }
   ]
 }
