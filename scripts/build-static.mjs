@@ -34,7 +34,10 @@ for (const [route, name] of Object.entries(manifest.routes)) {
 }
 for (const [route, target] of Object.entries(manifest.redirects)) {
   const name = route.endsWith('.html') ? route.slice(1) : `${route.slice(1)}/index.html`;
-  await write(name, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${target}"><title>Redirecting</title></head><body><a href="${target}">Continue</a></body></html>\n`);
+  // GitHub Pages resolves /portfolio to portfolio.html before the directory.
+  // Redirect to the directory explicitly so legacy .html aliases cannot loop.
+  const destination = target !== '/' && manifest.routes[target] ? `${target}/` : target;
+  await write(name, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${destination}"><title>Redirecting</title></head><body><a href="${destination}">Continue</a></body></html>\n`);
 }
 await write('404.html', '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Page not found</title></head><body><h1>Page not found</h1><a href="/">Return home</a></body></html>\n');
 console.log(`Exported ${Object.keys(manifest.routes).length} pages and ${Object.keys(manifest.files).length} mapped files to dist.`);
