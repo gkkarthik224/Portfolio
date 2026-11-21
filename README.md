@@ -38,6 +38,8 @@ The standard-library test suite rebuilds the export, checks all public resources
 
 `.github/workflows/static.yml` runs the checks and publishes `dist` to GitHub Pages on pushes to `main`. The exporter versions assets by content to refresh changed files in cached browsers, and sends legacy page aliases to explicit directory URLs to prevent redirect loops.
 
+The exporter adds Cloudflare Web Analytics to every content page. View visitor and page metrics in the Cloudflare dashboard under Web Analytics for `gkkarthik224.github.io`. The beacon site token is a public identifier embedded in the HTML; it is not an account API credential. Local source previews do not load the beacon.
+
 ## Code analytics
 
 ```powershell

@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-11-21T20:11:00.911Z",
+  "generatedAtUtc": "2026-11-21T20:17:39.671Z",
   "methodology": "Physical lines in tracked/unignored source files. Code includes HTML, CSS, JS/MJS and Python. Config, documentation and SVG are outside code totals. Reports, dependencies, build output and artifacts are excluded. Minified runtime is counted as stored, not pretty-printed.",
   "before": {
     "files": 166,
@@ -55,17 +55,17 @@
   },
   "reduction": {
     "files": 34,
-    "bytes": 319449,
-    "codeLines": 1689,
-    "textLines": 2384
+    "bytes": 318833,
+    "codeLines": 1687,
+    "textLines": 2380
   },
   "current": {
     "files": 132,
-    "bytes": 15655333,
-    "textLines": 6449,
+    "bytes": 15655949,
+    "textLines": 6453,
     "codeFiles": 73,
-    "codeLines": 5258,
-    "codeBytes": 4906241,
+    "codeLines": 5260,
+    "codeBytes": 4906530,
     "groups": {
       "Bundled runtime": {
         "files": 38,
@@ -74,8 +74,8 @@
       },
       "Build, preview and tests": {
         "files": 10,
-        "lines": 754,
-        "bytes": 36040
+        "lines": 756,
+        "bytes": 36329
       },
       "Application source": {
         "files": 22,
@@ -91,8 +91,8 @@
     "byLanguage": {
       "JavaScript": {
         "files": 53,
-        "lines": 2570,
-        "bytes": 4268611
+        "lines": 2572,
+        "bytes": 4268900
       },
       "Python": {
         "files": 5,
@@ -833,8 +833,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2731,
-      "lines": 47
+      "bytes": 3058,
+      "lines": 49
     },
     {
       "path": "scripts/build-case-studies.mjs",
@@ -843,8 +843,8 @@
     },
     {
       "path": "scripts/build-static.mjs",
-      "bytes": 3291,
-      "lines": 60
+      "bytes": 3580,
+      "lines": 62
     },
     {
       "path": "scripts/code-metrics.mjs",

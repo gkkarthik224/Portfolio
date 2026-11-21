@@ -6,6 +6,7 @@ import { createHash } from 'node:crypto';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = resolve(root, 'dist');
 const manifest = JSON.parse(await readFile(resolve(root, 'config/routes.json'), 'utf8'));
+const analytics = `<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"6e6cb49d7e5944dd8824bee454297404"}'></script><!-- End Cloudflare Web Analytics -->`;
 const assetVersions = new Map();
 for (const [name, source] of Object.entries(manifest.files)) {
   if (!name.endsWith('.html')) {
@@ -33,7 +34,8 @@ function staticHtml(html) {
         // Give each changed asset a fresh URL on browsers and GitHub's CDN.
         url.searchParams.set('v', version);
         return `${prefix}${quote}${url.pathname}${url.search}${url.hash}${quote}`;
-      });
+      })
+    .replace(/<\/body>/i, `${analytics}\n$&`);
 }
 
 for (const [name, source] of Object.entries(manifest.files)) {
