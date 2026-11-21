@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-11-21T20:38:15.412Z",
+  "generatedAtUtc": "2026-11-21T20:46:29.175Z",
   "methodology": "Physical lines in tracked/unignored source files. Code includes HTML, CSS, JS/MJS and Python. Config, documentation and SVG are outside code totals. Reports, dependencies, build output and artifacts are excluded. Minified runtime is counted as stored, not pretty-printed.",
   "before": {
     "files": 166,
@@ -55,17 +55,17 @@
   },
   "reduction": {
     "files": 33,
-    "bytes": -681752,
-    "codeLines": 1678,
-    "textLines": 2370
+    "bytes": -682044,
+    "codeLines": 1670,
+    "textLines": 2362
   },
   "current": {
     "files": 133,
-    "bytes": 16656534,
-    "textLines": 6463,
+    "bytes": 16656826,
+    "textLines": 6471,
     "codeFiles": 73,
-    "codeLines": 5269,
-    "codeBytes": 4906741,
+    "codeLines": 5277,
+    "codeBytes": 4907033,
     "groups": {
       "Bundled runtime": {
         "files": 38,
@@ -79,8 +79,8 @@
       },
       "Application source": {
         "files": 22,
-        "lines": 3245,
-        "bytes": 666085
+        "lines": 3253,
+        "bytes": 666377
       },
       "Generated case studies": {
         "files": 3,
@@ -106,8 +106,8 @@
       },
       "CSS": {
         "files": 7,
-        "lines": 1381,
-        "bytes": 66981
+        "lines": 1389,
+        "bytes": 67273
       }
     }
   },
@@ -998,8 +998,8 @@
     },
     {
       "path": "src/styles/shared/local-customizations.css",
-      "bytes": 23272,
-      "lines": 636
+      "bytes": 23564,
+      "lines": 644
     },
     {
       "path": "src/styles/shared/page-motion.css",

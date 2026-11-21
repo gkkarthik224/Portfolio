@@ -431,7 +431,15 @@ h1[data-personal-name] {
     width: 100% !important;
   }
   .framer-TlDBu .framer-vs50g9 img {
-    object-position: 50% 20% !important;
+    /* Frame the face by card height, rather than enlarging the portrait to
+       cover a wide mobile card and clipping the chin. */
+    position: absolute;
+    left: 50%;
+    top: -29%;
+    width: auto !important;
+    height: 210% !important;
+    object-fit: contain !important;
+    transform: translateX(-50%) !important;
   }
   .framer-TlDBu .framer-1nw48ne > .framer-wgsb95-container,
   .framer-TlDBu .framer-1nw48ne > .framer-1y7do4z-container {
