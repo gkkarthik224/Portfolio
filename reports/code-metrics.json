@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-11-21T20:32:29.859Z",
+  "generatedAtUtc": "2026-11-21T20:35:43.916Z",
   "methodology": "Physical lines in tracked/unignored source files. Code includes HTML, CSS, JS/MJS and Python. Config, documentation and SVG are outside code totals. Reports, dependencies, build output and artifacts are excluded. Minified runtime is counted as stored, not pretty-printed.",
   "before": {
     "files": 166,
@@ -55,13 +55,13 @@
   },
   "reduction": {
     "files": 33,
-    "bytes": -1591899,
+    "bytes": -681973,
     "codeLines": 1675,
     "textLines": 2367
   },
   "current": {
     "files": 133,
-    "bytes": 17566681,
+    "bytes": 16656755,
     "textLines": 6466,
     "codeFiles": 73,
     "codeLines": 5272,
@@ -310,11 +310,6 @@
       "lines": 2
     },
     {
-      "path": "public/images/portrait/portrait-color.png",
-      "bytes": 1910228,
-      "lines": null
-    },
-    {
       "path": "public/images/projects/iit-bombay-internship-certificate.jpeg",
       "bytes": 1841334,
       "lines": null
@@ -347,6 +342,11 @@
     {
       "path": "public/images/portrait/portrait-transparent.png",
       "bytes": 1265337,
+      "lines": null
+    },
+    {
+      "path": "public/images/portrait/portrait-color.png",
+      "bytes": 1000302,
       "lines": null
     },
     {
@@ -383,7 +383,7 @@
     },
     {
       "path": "public/images/portrait/portrait-color.png",
-      "bytes": 1910228,
+      "bytes": 1000302,
       "lines": null
     },
     {
