@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-11-21T19:43:40.631Z",
+  "generatedAtUtc": "2026-11-21T19:45:39.756Z",
   "methodology": "Physical lines in tracked/unignored source files. Code includes HTML, CSS, JS/MJS and Python. Config, documentation and SVG are outside code totals. Reports, dependencies, build output and artifacts are excluded. Minified runtime is counted as stored, not pretty-printed.",
   "before": {
     "files": 166,
@@ -55,14 +55,14 @@
   },
   "reduction": {
     "files": 36,
-    "bytes": 336701,
+    "bytes": 336637,
     "codeLines": 2072,
-    "textLines": 2769
+    "textLines": 2767
   },
   "current": {
     "files": 130,
-    "bytes": 15638081,
-    "textLines": 6064,
+    "bytes": 15638145,
+    "textLines": 6066,
     "codeFiles": 71,
     "codeLines": 4875,
     "codeBytes": 4889256,
@@ -358,8 +358,8 @@
   "files": [
     {
       "path": ".github/workflows/static.yml",
-      "bytes": 966,
-      "lines": 48
+      "bytes": 1030,
+      "lines": 50
     },
     {
       "path": ".gitignore",
