@@ -5,7 +5,6 @@
     {label: 'Projects', href: '/portfolio'},
     {label: 'Skills', href: '/skills'},
     {label: 'Contact', href: '/contact'},
-    {label: 'Resume', href: 'https://drive.google.com/file/d/167um-hT0g-Xc2ClPDNb0z40feV9LT7e2/view?usp=drive_link'},
     {label: 'About', href: '/about'}
   ];
   const aliases = {'/home-settled.html': '/', '/about-loaded.html': '/about',
@@ -33,7 +32,6 @@
       const link = document.createElement('a');
       link.href = item.href; link.textContent = item.label;
       if (item.href === current) link.setAttribute('aria-current', 'page');
-      if (item.label === 'Resume') { link.target = '_blank'; link.rel = 'noopener noreferrer'; }
       nav.appendChild(link);
       links.set(item.href, link);
     }

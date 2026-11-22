@@ -1,7 +1,20 @@
 ﻿(() => {
   const arrow = '<svg viewBox="0 0 18 16" focusable="false"><path d="M 0.667 7 L 14.958 7 L 8.833 0.875 L 9.603 0 L 17.187 7.583 L 9.603 15.167 L 8.833 14.292 L 14.958 8.167 L 0.667 8.167 Z" fill="currentColor"/></svg>';
   function enhance() {
-    document.querySelectorAll('.framer-TlDBu a.framer-qHF7D').forEach(card => {
+    document.querySelectorAll('.framer-TlDBu .framer-qtc6gu-container .framer-qHF7D').forEach(card => {
+      card.removeAttribute('href');
+      card.removeAttribute('target');
+      card.removeAttribute('tabindex');
+      card.setAttribute('aria-disabled', 'true');
+      card.setAttribute('aria-label', 'Resume currently unavailable');
+      if (!card.querySelector('.home-resume-status')) {
+        const status = document.createElement('span');
+        status.className = 'home-resume-status';
+        status.textContent = 'Unavailable';
+        card.appendChild(status);
+      }
+    });
+    document.querySelectorAll('.framer-TlDBu a.framer-qHF7D[href]').forEach(card => {
       card.setAttribute('data-home-cell-link', '');
       if (card.querySelector('.home-cell-arrow')) return;
       const icon = document.createElement('span');
