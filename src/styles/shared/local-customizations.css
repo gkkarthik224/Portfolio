@@ -408,10 +408,17 @@ h1[data-personal-name] {
   }
 }
 @media (max-width: 699px) {
+  .framer-k6grlf:has(.framer-TlDBu),
+  .framer-TlDBu {
+    height: auto !important;
+  }
   .framer-TlDBu .framer-1nw48ne {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    grid-template-rows: repeat(4, minmax(0, 1fr)) !important;
+    grid-template-rows: clamp(280px, 80vw, 360px) repeat(3, minmax(160px, 1fr)) !important;
+    height: auto !important;
+    min-height: 100svh;
+    flex: 1 0 auto !important;
   }
   .framer-TlDBu .framer-1nw48ne > .framer-wgsb95-container {
     grid-area: 3 / 1 / 4 / 2 !important;
@@ -431,15 +438,14 @@ h1[data-personal-name] {
     width: 100% !important;
   }
   .framer-TlDBu .framer-vs50g9 img {
-    /* Frame the face by card height, rather than enlarging the portrait to
-       cover a wide mobile card and clipping the chin. */
+    /* Keep the complete portrait inside the taller mobile card. */
     position: absolute;
-    left: 50%;
-    top: -29%;
-    width: auto !important;
-    height: 210% !important;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: contain !important;
-    transform: translateX(-50%) !important;
+    object-position: center bottom !important;
+    transform: none !important;
   }
   .framer-TlDBu .framer-1nw48ne > .framer-wgsb95-container,
   .framer-TlDBu .framer-1nw48ne > .framer-1y7do4z-container {
