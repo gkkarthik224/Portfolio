@@ -619,6 +619,8 @@ nav.framer-Txym4,
   transform: translateX(0);
   transition: transform 220ms ease;
 }
+/* Keep a comfortable tap area around the slimmer visible switch. */
+.portfolio-theme-switch::after { content: ""; position: absolute; inset: -6px 0; }
 html[framestack-theme="dark"] .portfolio-theme-switch { justify-content: flex-start; }
 html[framestack-theme="dark"] .portfolio-theme-switch > span { transform: translateX(var(--theme-thumb-travel)); }
 .portfolio-theme-switch:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
@@ -627,9 +629,9 @@ html[framestack-theme="dark"] .portfolio-theme-switch > span { transform: transl
   inset: auto;
   z-index: 1;
   flex: none;
-  height: 40px;
+  height: 32px;
   margin-left: 4px;
-  padding-block: 9px;
+  padding-block: 5px;
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
   box-shadow: none;
@@ -637,10 +639,10 @@ html[framestack-theme="dark"] .portfolio-theme-switch > span { transform: transl
 .cell-top-menu .portfolio-theme-switch:focus-visible { outline-offset: -3px; }
 @media (max-width: 699px) {
   .portfolio-theme-switch {
-    top: calc(23px + env(safe-area-inset-top, 0px));
+    top: calc(29px + env(safe-area-inset-top, 0px));
     right: max(16px, env(safe-area-inset-right, 0px));
-    height: 44px;
-    padding-block: 11px;
+    height: 32px;
+    padding-block: 5px;
   }
   .cell-top-menu {
     top: calc(16px + env(safe-area-inset-top, 0px));
@@ -658,10 +660,11 @@ html[framestack-theme="dark"] .portfolio-theme-switch > span { transform: transl
     --theme-thumb-size: 16px;
     --theme-thumb-travel: 16px;
     width: 44px;
-    height: 44px;
+    height: 28px;
     margin: 0;
-    padding-block: 13px;
+    padding-block: 5px;
   }
+  .cell-top-menu .portfolio-theme-switch::after { inset-block: -8px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-theme-switch > span { transition: none; }
