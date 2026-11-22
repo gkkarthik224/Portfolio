@@ -583,8 +583,10 @@ nav.framer-Txym4,
   display: none !important;
 }
 
-/* Keep the theme switch available in the top-right corner on every page. */
+/* Share the glass menu where available; keep the home switch top-right. */
 .portfolio-theme-switch {
+  --theme-thumb-size: 20px;
+  --theme-thumb-travel: 20px;
   position: fixed;
   top: calc(20px + env(safe-area-inset-top, 0px));
   right: max(24px, env(safe-area-inset-right, 0px));
@@ -609,17 +611,30 @@ nav.framer-Txym4,
 }
 .portfolio-theme-switch > span {
   display: block;
-  flex: 0 0 20px;
-  width: 20px;
-  height: 20px;
+  flex: 0 0 var(--theme-thumb-size);
+  width: var(--theme-thumb-size);
+  height: var(--theme-thumb-size);
   border-radius: 50%;
   background: currentColor;
   transform: translateX(0);
   transition: transform 220ms ease;
 }
 html[framestack-theme="dark"] .portfolio-theme-switch { justify-content: flex-start; }
-html[framestack-theme="dark"] .portfolio-theme-switch > span { transform: translateX(20px); }
+html[framestack-theme="dark"] .portfolio-theme-switch > span { transform: translateX(var(--theme-thumb-travel)); }
 .portfolio-theme-switch:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.cell-top-menu .portfolio-theme-switch {
+  position: relative;
+  inset: auto;
+  z-index: 1;
+  flex: none;
+  height: 40px;
+  margin-left: 4px;
+  padding-block: 9px;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+.cell-top-menu .portfolio-theme-switch:focus-visible { outline-offset: -3px; }
 @media (max-width: 699px) {
   .portfolio-theme-switch {
     top: calc(23px + env(safe-area-inset-top, 0px));
@@ -631,13 +646,22 @@ html[framestack-theme="dark"] .portfolio-theme-switch > span { transform: transl
     top: calc(16px + env(safe-area-inset-top, 0px));
     left: max(16px, env(safe-area-inset-left, 0px));
     transform: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(var(--menu-link-count, 5), minmax(0, 1fr)) 44px;
     box-sizing: border-box;
-    width: calc(100% - 100px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+    width: calc(100% - 32px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
     max-width: none;
-    overflow-x: auto;
+    overflow: hidden;
   }
-  .cell-top-menu a { min-width: 44px; min-height: 44px; padding: 9px; font-size: 12px; }
+  .cell-top-menu a { min-width: 0; min-height: 44px; padding: 9px 2px; font-size: clamp(11px, 3vw, 12px); }
+  .cell-top-menu .portfolio-theme-switch {
+    --theme-thumb-size: 16px;
+    --theme-thumb-travel: 16px;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    padding-block: 13px;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-theme-switch > span { transition: none; }

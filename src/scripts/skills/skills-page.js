@@ -22,6 +22,7 @@
     document.body.classList.add('has-cell-menu');
     const nav = document.createElement('nav');
     nav.className = 'cell-top-menu';
+    nav.style.setProperty('--menu-link-count', String(items.length));
     nav.setAttribute('aria-label', 'Page menu');
     const cell = document.createElement('span');
     cell.className = 'cell-menu-cell';

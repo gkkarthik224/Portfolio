@@ -20,8 +20,12 @@
   };
   function mountSwitch() {
     if (!document.body) return;
+    const host = document.querySelector('.cell-top-menu') || document.body;
     const existing = document.getElementById('portfolio-theme-switch');
-    if (existing) return;
+    if (existing) {
+      if (existing.parentElement !== host) host.appendChild(existing);
+      return;
+    }
     const button = document.createElement('button');
     button.id = 'portfolio-theme-switch';
     button.className = 'theme-toggle portfolio-theme-switch';
@@ -29,7 +33,7 @@
     const thumb = document.createElement('span');
     thumb.setAttribute('aria-hidden', 'true');
     button.appendChild(thumb);
-    document.body.appendChild(button);
+    host.appendChild(button);
   }
   function apply() {
     mountSwitch();
