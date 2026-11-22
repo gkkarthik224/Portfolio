@@ -571,7 +571,7 @@ nav.framer-Txym4,
   display: none !important;
 }
 
-/* One theme switch: fixed on desktop, after page content on mobile. */
+/* Keep the theme switch available in the top-right corner on every page. */
 .portfolio-theme-switch {
   position: fixed;
   top: calc(20px + env(safe-area-inset-top, 0px));
@@ -610,22 +610,22 @@ html[framestack-theme="dark"] .portfolio-theme-switch > span { transform: transl
 .portfolio-theme-switch:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 @media (max-width: 699px) {
   .portfolio-theme-switch {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin: 24px auto max(24px, env(safe-area-inset-bottom, 0px));
+    top: calc(23px + env(safe-area-inset-top, 0px));
+    right: max(16px, env(safe-area-inset-right, 0px));
+    height: 44px;
+    padding-block: 11px;
   }
   .cell-top-menu {
-    left: 16px;
+    top: calc(16px + env(safe-area-inset-top, 0px));
+    left: max(16px, env(safe-area-inset-left, 0px));
     transform: none;
-    display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    display: flex;
     box-sizing: border-box;
-    width: calc(100% - 32px);
+    width: calc(100% - 100px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
     max-width: none;
-    overflow: hidden;
+    overflow-x: auto;
   }
-  .cell-top-menu a { min-width: 0; min-height: 44px; padding: 9px 2px; font-size: clamp(10px, 3vw, 12px); }
+  .cell-top-menu a { min-width: 44px; min-height: 44px; padding: 9px; font-size: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-theme-switch > span { transition: none; }

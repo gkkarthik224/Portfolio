@@ -21,11 +21,7 @@
   function mountSwitch() {
     if (!document.body) return;
     const existing = document.getElementById('portfolio-theme-switch');
-    if (existing) {
-      // Mobile places this control in normal flow after the page content.
-      if (document.body.lastElementChild !== existing) document.body.appendChild(existing);
-      return;
-    }
+    if (existing) return;
     const button = document.createElement('button');
     button.id = 'portfolio-theme-switch';
     button.className = 'theme-toggle portfolio-theme-switch';
