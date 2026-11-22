@@ -48,7 +48,7 @@
         form.reset();
         show('success', successMessage);
       } catch {
-        show('error', `Your message could not be confirmed. Please try again or email ${recipient} directly.`);
+        show('error', `We couldn’t confirm your message. Try again or email ${recipient} directly.`);
       } finally {
         clearTimeout(timeout);
         pending.delete(form);
@@ -95,7 +95,7 @@
         }
         const subject = `Portfolio enquiry from ${sender}`;
         await send(subject, {name: sender, email: replyTo, message},
-          'Thank you! Your message has been submitted. I will reply using the email you provided.');
+          'Message sent. I’ll reply by email.');
       }, true);
       for (const field of [name, details]) field.addEventListener('input', () => field.setCustomValidity(''));
     });
@@ -132,7 +132,7 @@
     await sendDemo(`Demo request: ${title}`, {
       project: title, ...(email ? {email: contact} : {phone: contact}),
       message: `I would like to request a demo of ${title}.`
-    }, 'Thank you! Your demo request has been submitted. I will contact you using the details you provided.');
+    }, 'Demo request sent. I’ll contact you soon.');
   });
 
   function selectTab(selectedTab) {

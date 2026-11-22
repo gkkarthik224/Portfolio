@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script data-local-preview>if(location.protocol==='file:')location.replace('http://localhost:8080/portfolio/script-change-management');</script>
   <title>Script Change Management | Karthik Krishna</title>
-  <meta name="description" content="AI-assisted orchestration for maintaining automated test scripts as application UI and logic change across regression cycles.">
+  <meta name="description" content="Maintains automated test scripts as application UI and logic change.">
   <meta property="og:title" content="Script Change Management | Karthik Krishna">
-  <meta property="og:description" content="AI-assisted orchestration for maintaining automated test scripts as application UI and logic change across regression cycles.">
+  <meta property="og:description" content="Maintains automated test scripts as application UI and logic change.">
   <link rel="icon" href="/favicon.svg">
   <link rel="stylesheet" href="/page-motion.css?v=3">
   <link rel="stylesheet" href="/local-customizations.css?v=41">
@@ -30,47 +30,47 @@
   <main id="main" class="case-main">
     <header class="case-hero">
       <a class="case-back" href="/portfolio">All projects <span aria-hidden="true">↗</span></a>
-      <p class="case-eyebrow">AI-assisted test maintenance / Sanitized employer work</p>
+      <p class="case-eyebrow">AI-assisted test maintenance</p>
       <h1>Script Change Management</h1>
-      <p class="case-summary">AI-assisted orchestration for maintaining automated test scripts as application UI and logic change across regression cycles.</p>
+      <p class="case-summary">Maintains automated test scripts as application UI and logic change.</p>
       <dl class="case-facts">
         <div><dt>Status</dt><dd>In development · Internal system</dd></div>
         <div><dt>Context</dt><dd>Ideabytes · NDA</dd></div>
         <div><dt>My role</dt><dd>Backend developer · Orchestration and pipelines</dd></div>
       </dl>
-      <p class="case-boundary">Sanitized overview of confidential employer work. Client identities, proprietary code, test inventories and internal implementation artifacts are omitted.</p>
+      <p class="case-boundary">Employer work under NDA. Client data, code, and internal artifacts are omitted.</p>
     </header>
     <div id="case-content" tabindex="-1">
       
       <section class="case-section case-two-column" aria-labelledby="problem-heading">
-        <div><p class="case-index">01 / Context</p><h2 id="problem-heading">The problem</h2><p>Application UI and logic changes can break large inventories of automated tests during quarterly or yearly regression runs. Investigating those breakages and updating scripts creates recurring maintenance work.</p></div>
-        <div><h2>My contribution</h2><p>Backend development focused on orchestration logic and pipeline development, using custom Python scripts and LangChain as the decision framework for synchronous orchestration.</p></div>
+        <div><p class="case-index">01 / Context</p><h2 id="problem-heading">The problem</h2><p>Application changes break regression tests, creating recurring investigation and script maintenance.</p></div>
+        <div><h2>My contribution</h2><p>Developed synchronous orchestration and backend pipelines using Python and LangChain.</p></div>
       </section>
       <section class="case-section" aria-labelledby="workflow-heading">
-        <p class="case-index">02 / Workflow</p><h2 id="workflow-heading">From input to outcome</h2>
+        <p class="case-index">02 / Workflow</p><h2 id="workflow-heading">Workflow</h2>
         <ol class="case-flow" aria-label="High-level workflow"><li><h3>Detect a broken script</h3><p>A script breakage triggers the maintenance workflow.</p></li><li><h3>Correlate defect reports</h3><p>The Auto Defect Management system supplies confirmed reports as application-change signals.</p></li><li><h3>Orchestrate a repair</h3><p>Custom Python and LangChain coordinate the synchronous maintenance workflow.</p></li><li><h3>Update the test code</h3><p>The workflow produces script changes intended to address the breakage.</p></li></ol>
       </section>
       <section class="case-section" aria-labelledby="architecture-heading">
-        <p class="case-index">03 / Architecture</p><h2 id="architecture-heading">Implementation boundaries</h2>
-        <div class="case-grid"><article class="case-panel"><h3>Decision and orchestration layer</h3><p>Custom Python scripts use LangChain for decision-making within a synchronous orchestration pipeline.</p></article>
-<article class="case-panel"><h3>Defect workflow bridge</h3><p>The pipeline connects with Auto Defect Management to use confirmed reports as change signals for test maintenance.</p></article>
-<article class="case-panel"><h3>Tracing and observability</h3><p>LangSmith provides LLM tracing, alongside OpenTelemetry for observability.</p></article>
-<article class="case-panel"><h3>Development tooling</h3><p>GitHub Copilot supports development alongside the Python and LangChain implementation.</p></article></div>
+        <p class="case-index">03 / Architecture</p><h2 id="architecture-heading">Architecture</h2>
+        <div class="case-grid"><article class="case-panel"><h3>Decision and orchestration layer</h3><p>Python and LangChain coordinate synchronous decisions and workflows.</p></article>
+<article class="case-panel"><h3>Defect workflow bridge</h3><p>Auto Defect Management supplies confirmed change signals.</p></article>
+<article class="case-panel"><h3>Tracing and observability</h3><p>LangSmith traces LLM calls; OpenTelemetry supports observability.</p></article>
+<article class="case-panel"><h3>Development tooling</h3><p>GitHub Copilot supports Python and LangChain development.</p></article></div>
         <ul class="case-tools" aria-label="Technologies and implementation concepts"><li>Python</li><li>LangChain</li><li>LangSmith</li><li>OpenTelemetry</li><li>GitHub Copilot</li></ul>
       </section>
       <section class="case-section" aria-labelledby="decisions-heading">
         <p class="case-index">04 / Engineering decisions</p><h2 id="decisions-heading">Controls and trade-offs</h2>
-        <div class="case-decisions"><article class="case-panel"><h3>Connect maintenance to diagnostic context</h3><p>The script workflow consumes confirmed reports from the defect-management integration rather than treating a broken script as an isolated event.</p></article>
-<article class="case-panel"><h3>Keep the execution model explicit</h3><p>Custom Python scripts and LangChain coordinate implementation through synchronous orchestration.</p></article>
-<article class="case-panel"><h3>Trace the orchestration</h3><p>LangSmith tracing and OpenTelemetry observability accompany the decision and orchestration pipeline.</p></article></div>
+        <div class="case-decisions"><article class="case-panel"><h3>Connect maintenance to diagnostic context</h3><p>Use confirmed defect reports to guide script maintenance.</p></article>
+<article class="case-panel"><h3>Keep the execution model explicit</h3><p>Keep orchestration synchronous in Python and LangChain.</p></article>
+<article class="case-panel"><h3>Trace the orchestration</h3><p>Use LangSmith and OpenTelemetry to inspect workflow execution.</p></article></div>
       </section>
       <section class="case-section case-result" aria-labelledby="result-heading">
-        <p class="case-index">05 / Status and evidence</p><h2 id="result-heading">Development status and evidence</h2>
-        <p>An internal system in development, with backend orchestration and pipeline development as the documented contribution. Repair acceptance criteria, production rollout and measured operating results are not published in this sanitized overview.</p><p>Employer code and internal artifacts are confidential under NDA. This case study provides a sanitized technical explanation without client data or proprietary implementation material.</p>
+        <p class="case-index">05 / Status and evidence</p><h2 id="result-heading">Development status</h2>
+        <p>Internal system in development. My contribution covers backend orchestration and pipelines.</p><p>Production rollout, repair acceptance criteria, and measured results are not published.</p>
       </section>
       <section class="case-section case-next" aria-labelledby="related-heading">
-        <div><p class="case-index">Connected work</p><h2 id="related-heading">Auto Defect Management System</h2><a href="/portfolio/defect-management">View related case study <span aria-hidden="true">↗</span></a></div>
-        <a class="case-cta" href="/contact">Discuss an engineering opportunity <span aria-hidden="true">↗</span></a>
+        <div><p class="case-index">Connected work</p><h2 id="related-heading">Auto Defect Management System</h2><a href="/portfolio/defect-management">View project <span aria-hidden="true">↗</span></a></div>
+        <a class="case-cta" href="/contact">Get in touch <span aria-hidden="true">↗</span></a>
       </section>
     </div>
   </main>

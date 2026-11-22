@@ -6,13 +6,13 @@
     "file": "src/pages/projects/procurement-erp/index.html",
     "title": "Smart Procurement ERP Logging System",
     "eyebrow": "Independent work / Document intelligence",
-    "status": "Functional prototype · Development completed",
+    "status": "Functional prototype",
     "association": "Self-employed · Independent prototype",
-    "role": "Independent prototype development",
-    "summary": "A document-to-ERP prototype for turning bills, receipts and invoices into structured procurement records with confidence-based review gates.",
-    "boundary": "Independent functional prototype, with completed development and ERP integration tested against Odoo references.",
-    "problem": "Logging procurement documents into enterprise ERP systems involves repetitive manual reading and data entry. The prototype explores a connected workflow from document ingestion and extraction to review and ERP integration.",
-    "contribution": "Independent prototype development spanning document ingestion, multimodal extraction, backend workflow design and ERP adapter integration.",
+    "role": "Independent developer",
+    "summary": "Turns bills, receipts, and invoices into procurement records with confidence-based review.",
+    "boundary": "Independent prototype. ERP integration tested against Odoo references.",
+    "problem": "Procurement documents require repetitive reading and manual ERP data entry.",
+    "contribution": "Built document ingestion, multimodal extraction, backend workflows, and ERP adapters.",
     "workflow": [
       {"title": "Receive documents", "detail": "Upload APIs, email inbox watchers and external payloads."},
       {"title": "Apply ingestion controls", "detail": "Hash deduplication, antivirus scanning and quarantine."},
@@ -21,20 +21,20 @@
       {"title": "Integrate with an ERP", "detail": "A ProcurementERP port and adapters; tested against Odoo references."}
     ],
     "architecture": [
-      {"title": "API and validation", "detail": "Python, FastAPI and Pydantic form the backend and validation layer."},
-      {"title": "Document intelligence", "detail": "PaddleOCR is paired with an 8-bit quantized 8B VLM for multimodal layout extraction."},
-      {"title": "Persistence and retrieval", "detail": "PostgreSQL combines pgvector with full-text search. MinIO/S3 object storage holds document assets."},
-      {"title": "Workflow and integration", "detail": "Temporal workflows coordinate processing. The ProcurementERP port separates the workflow from target-specific ERP adapters."}
+      {"title": "API and validation", "detail": "FastAPI APIs with Pydantic validation."},
+      {"title": "Document intelligence", "detail": "PaddleOCR and an 8-bit quantized 8B VLM extract document layouts."},
+      {"title": "Persistence and retrieval", "detail": "PostgreSQL with pgvector and full-text search; MinIO/S3 for documents."},
+      {"title": "Workflow and integration", "detail": "Temporal coordinates processing; ERP adapters sit behind the ProcurementERP port."}
     ],
     "decisions": [
-      {"title": "Separate extraction from acceptance", "detail": "Model output is checked with confidence scoring and deterministic backend fallback filters. Unverified or low-confidence extractions go through human review gates."},
-      {"title": "Make the ERP boundary explicit", "detail": "The adapter pattern keeps target-specific ERP communication behind the ProcurementERP port. Odoo references were used for integration testing."},
-      {"title": "Combine OCR with visual-language extraction", "detail": "PaddleOCR is paired with an 8-bit quantized 8B VLM for multimodal layout extraction. The model configuration is explicit so future evaluation can be tied to a reproducible setup."}
+      {"title": "Separate extraction from acceptance", "detail": "Confidence scoring and deterministic filters route uncertain extractions to human review."},
+      {"title": "Make the ERP boundary explicit", "detail": "ERP adapters isolate target-specific integration logic."},
+      {"title": "Combine OCR with visual-language extraction", "detail": "An explicit OCR and VLM configuration supports reproducible future evaluation."}
     ],
     "tools": ["Python", "FastAPI", "Pydantic", "PaddleOCR", "8B VLM · 8-bit", "PostgreSQL", "pgvector", "Full-text search", "MinIO / S3", "Temporal", "Odoo references"],
-    "resultTitle": "Current result and validation boundary",
-    "result": "A functional prototype with completed development and reference-based ERP integration testing. Extraction quality, review rate, processing latency and cost per document remain unpublished in this case study.",
-    "evidence": "This public case study documents the workflow and implementation choices. A source repository, demonstration link and reproducible benchmark are not linked yet.",
+    "resultTitle": "Result",
+    "result": "Functional prototype completed, including reference-based ERP integration testing.",
+    "evidence": "Public code, demo, and performance benchmarks are not yet available.",
     "related": "script-change-management"
   },
   {
@@ -42,14 +42,14 @@
     "path": "/portfolio/script-change-management",
     "file": "src/pages/projects/travel-easy/index.html",
     "title": "Script Change Management",
-    "eyebrow": "AI-assisted test maintenance / Sanitized employer work",
+    "eyebrow": "AI-assisted test maintenance",
     "status": "In development · Internal system",
     "association": "Ideabytes · NDA",
     "role": "Backend developer · Orchestration and pipelines",
-    "summary": "AI-assisted orchestration for maintaining automated test scripts as application UI and logic change across regression cycles.",
-    "boundary": "Sanitized overview of confidential employer work. Client identities, proprietary code, test inventories and internal implementation artifacts are omitted.",
-    "problem": "Application UI and logic changes can break large inventories of automated tests during quarterly or yearly regression runs. Investigating those breakages and updating scripts creates recurring maintenance work.",
-    "contribution": "Backend development focused on orchestration logic and pipeline development, using custom Python scripts and LangChain as the decision framework for synchronous orchestration.",
+    "summary": "Maintains automated test scripts as application UI and logic change.",
+    "boundary": "Employer work under NDA. Client data, code, and internal artifacts are omitted.",
+    "problem": "Application changes break regression tests, creating recurring investigation and script maintenance.",
+    "contribution": "Developed synchronous orchestration and backend pipelines using Python and LangChain.",
     "workflow": [
       {"title": "Detect a broken script", "detail": "A script breakage triggers the maintenance workflow."},
       {"title": "Correlate defect reports", "detail": "The Auto Defect Management system supplies confirmed reports as application-change signals."},
@@ -57,20 +57,20 @@
       {"title": "Update the test code", "detail": "The workflow produces script changes intended to address the breakage."}
     ],
     "architecture": [
-      {"title": "Decision and orchestration layer", "detail": "Custom Python scripts use LangChain for decision-making within a synchronous orchestration pipeline."},
-      {"title": "Defect workflow bridge", "detail": "The pipeline connects with Auto Defect Management to use confirmed reports as change signals for test maintenance."},
-      {"title": "Tracing and observability", "detail": "LangSmith provides LLM tracing, alongside OpenTelemetry for observability."},
-      {"title": "Development tooling", "detail": "GitHub Copilot supports development alongside the Python and LangChain implementation."}
+      {"title": "Decision and orchestration layer", "detail": "Python and LangChain coordinate synchronous decisions and workflows."},
+      {"title": "Defect workflow bridge", "detail": "Auto Defect Management supplies confirmed change signals."},
+      {"title": "Tracing and observability", "detail": "LangSmith traces LLM calls; OpenTelemetry supports observability."},
+      {"title": "Development tooling", "detail": "GitHub Copilot supports Python and LangChain development."}
     ],
     "decisions": [
-      {"title": "Connect maintenance to diagnostic context", "detail": "The script workflow consumes confirmed reports from the defect-management integration rather than treating a broken script as an isolated event."},
-      {"title": "Keep the execution model explicit", "detail": "Custom Python scripts and LangChain coordinate implementation through synchronous orchestration."},
-      {"title": "Trace the orchestration", "detail": "LangSmith tracing and OpenTelemetry observability accompany the decision and orchestration pipeline."}
+      {"title": "Connect maintenance to diagnostic context", "detail": "Use confirmed defect reports to guide script maintenance."},
+      {"title": "Keep the execution model explicit", "detail": "Keep orchestration synchronous in Python and LangChain."},
+      {"title": "Trace the orchestration", "detail": "Use LangSmith and OpenTelemetry to inspect workflow execution."}
     ],
     "tools": ["Python", "LangChain", "LangSmith", "OpenTelemetry", "GitHub Copilot"],
-    "resultTitle": "Development status and evidence",
-    "result": "An internal system in development, with backend orchestration and pipeline development as the documented contribution. Repair acceptance criteria, production rollout and measured operating results are not published in this sanitized overview.",
-    "evidence": "Employer code and internal artifacts are confidential under NDA. This case study provides a sanitized technical explanation without client data or proprietary implementation material.",
+    "resultTitle": "Development status",
+    "result": "Internal system in development. My contribution covers backend orchestration and pipelines.",
+    "evidence": "Production rollout, repair acceptance criteria, and measured results are not published.",
     "related": "defect-management"
   },
   {
@@ -82,10 +82,10 @@
     "status": "Deployed",
     "association": "Ideabytes · NDA",
     "role": "Developer · Evidence collection, duplicate checks and logging",
-    "summary": "An integration workflow that collects automated-test failure evidence, checks existing Jira issues and structures new defect reports.",
-    "boundary": "Sanitized overview of confidential employer work. Client identities, issue contents, proprietary code and internal test artifacts are omitted.",
-    "problem": "Automated test runs can generate repeated failures that require manual investigation and duplicate bug reports. The system addresses the work between observing a failed test and producing a useful issue for triage.",
-    "contribution": "Hands-on development of the evidence collection mechanism, automated duplicate-checking logic, and the script-healing and logging framework connecting the test and issue-management workflows.",
+    "summary": "Collects test failure evidence, checks existing Jira issues, and structures new defect reports.",
+    "boundary": "Employer work under NDA. Client data, code, and internal artifacts are omitted.",
+    "problem": "Repeated test failures create manual investigation work and duplicate bug reports.",
+    "contribution": "Developed evidence collection, duplicate checks, and the healing/logging framework.",
     "workflow": [
       {"title": "Capture an execution failure", "detail": "Collect failures from Eggplant automation runs."},
       {"title": "Gather evidence", "detail": "Collect diagnostic context for the failed execution."},
@@ -93,20 +93,20 @@
       {"title": "Structure a new report", "detail": "Format a clean Jira ticket for a genuinely new issue."}
     ],
     "architecture": [
-      {"title": "Test execution boundary", "detail": "Eggplant supplies automated-test execution failures to the integration workflow."},
-      {"title": "Evidence and duplicate checks", "detail": "Diagnostic evidence collection and automated checks against existing Jira tickets support the triage workflow. The public summary does not specify the duplicate-matching algorithm."},
-      {"title": "Jira logging and issue tracking", "detail": "The system connects automated-test logging with Jira issue tracking."},
-      {"title": "Script-maintenance bridge", "detail": "The logging and healing framework connects this workflow to Script Change Management. The two case studies describe distinct responsibilities within the connected work."}
+      {"title": "Test execution boundary", "detail": "Eggplant supplies automated-test failures."},
+      {"title": "Evidence and duplicate checks", "detail": "Collects diagnostics and checks Jira for duplicates. Matching details are confidential."},
+      {"title": "Jira logging and issue tracking", "detail": "Connects test logs with Jira issue tracking."},
+      {"title": "Script-maintenance bridge", "detail": "Links defect reporting to Script Change Management."}
     ],
     "decisions": [
-      {"title": "Check before reporting", "detail": "Existing Jira tickets are checked before a new defect report is created, with the aim of avoiding duplicate issue clutter."},
-      {"title": "Collect context at the failure boundary", "detail": "Evidence collection is part of the integration workflow so that new issue reports can carry diagnostic context."},
-      {"title": "Connect reporting to script maintenance", "detail": "The healing and logging framework provides a bridge from defect-management work to the connected Script Change Management system."}
+      {"title": "Check before reporting", "detail": "Check Jira before creating a report to reduce duplicates."},
+      {"title": "Collect context at the failure boundary", "detail": "Collect diagnostics when a test fails to support triage."},
+      {"title": "Connect reporting to script maintenance", "detail": "Feed defect context into the connected script-maintenance workflow."}
     ],
     "tools": ["PostgreSQL", "Vector DB", "Transformers", "Webhook", "FastAPI"],
-    "resultTitle": "Internal-system scope and evidence",
-    "result": "A deployed internal integration tool connecting test execution, diagnostic evidence and Jira reporting. The disclosed contribution covers evidence collection, duplicate checks and the healing/logging framework; deployment scale and measured business impact are not included.",
-    "evidence": "Employer code, ticket examples and test artifacts remain confidential under NDA. The public evidence is this sanitized workflow and contribution summary.",
+    "resultTitle": "Result",
+    "result": "Deployed internally to connect test failures, diagnostic evidence, and Jira reporting.",
+    "evidence": "Deployment scale and measured business impact are not publicly available.",
     "related": "script-change-management"
   }
 ]

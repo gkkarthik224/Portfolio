@@ -5,43 +5,43 @@
     {
       id: 'travel-easy',
       title: 'Script Change Management',
-      organization: 'Ideabytes · Sanitized employer work',
+      organization: 'Ideabytes',
       category: 'AI & Automation',
       summary: 'AI-assisted test-script maintenance for application UI and logic changes across regression cycles.',
-      description: 'Backend orchestration and pipeline development using custom Python and LangChain, connected to defect-management signals. LangSmith and OpenTelemetry support tracing and observability.',
+      description: 'Python and LangChain pipelines use defect reports to guide maintenance, with LangSmith and OpenTelemetry tracing.',
       tags: ['AI-assisted maintenance', 'Synchronous orchestration'],
       status: 'In development · Internal system',
       role: 'Backend developer · Orchestration and pipelines',
       tools: ['Python', 'LangChain', 'LangSmith', 'OpenTelemetry'],
-      evidenceNote: 'Sanitized overview. Employer code and internal artifacts are confidential under NDA.',
+      evidenceNote: 'Employer work under NDA.',
       caseStudyUrl: '/portfolio/script-change-management'
     },
     {
       id: 'gamma',
       title: 'Smart Procurement ERP Logging System',
-      organization: 'Self-employed · Independent prototype',
+      organization: 'Independent project',
       category: 'Enterprise Software',
       summary: 'A document-to-ERP workflow for bills, receipts and invoices, with confidence-based human review.',
-      description: 'PaddleOCR and an 8-bit quantized 8B VLM extract document structure. A FastAPI backend, Temporal workflows and a ProcurementERP adapter connect ingestion, review and ERP integration tested against Odoo references.',
+      description: 'Built with PaddleOCR, a quantized VLM, and Temporal workflows. ERP adapters were tested against Odoo references.',
       tags: ['Document intelligence', 'ERP integration'],
-      status: 'Functional prototype · Development completed',
-      role: 'Independent prototype development',
+      status: 'Functional prototype',
+      role: 'Independent developer',
       tools: ['FastAPI', 'PaddleOCR', '8B VLM · 8-bit', 'PostgreSQL', 'Temporal'],
-      evidenceNote: 'Reference-tested prototype. Public code, demo and performance benchmarks are not linked yet.',
+      evidenceNote: 'Reference-tested; benchmarks not published.',
       caseStudyUrl: '/portfolio/procurement-erp'
     },
     {
       id: 'stream-ai',
       title: 'Auto Defect Management System',
-      organization: 'Ideabytes · Sanitized employer work',
+      organization: 'Ideabytes',
       category: 'Workflow Automation',
       summary: 'Connects automated-test failure evidence with duplicate checks and structured Jira reporting.',
-      description: 'Captures Eggplant execution failures, gathers diagnostics and checks existing Jira tickets before structuring a new issue. My contribution covers evidence collection, duplicate-checking logic and the healing/logging framework.',
+      description: 'Collects Eggplant diagnostics and checks Jira before creating a report. I developed evidence collection, duplicate checks, and healing/logging workflows.',
       tags: ['Failure evidence', 'Jira integration'],
       status: 'Deployed',
       role: 'Developer · Evidence collection and duplicate checks',
       tools: ['PostgreSQL', 'Vector DB', 'Transformers', 'Webhook', 'FastAPI'],
-      evidenceNote: 'Sanitized overview. Ticket examples, employer code and internal test artifacts are confidential under NDA.',
+      evidenceNote: 'Employer work under NDA.',
       caseStudyUrl: '/portfolio/defect-management'
     },
     {
@@ -51,10 +51,10 @@
       category: 'Engineering Software',
       certificate: {image: 'iit-bombay-internship-certificate.jpeg'},
       summary: 'Software for exploring and analysing the strength of fibre-reinforced polymer materials.',
-      description: 'An engineering software project focused on fibre-reinforced polymer (FRP) material strength. It brings material analysis into a dedicated software interface.',
+      description: 'Developed during my IIT Bombay internship.',
       tags: ['Material analysis', 'Engineering'],
       role: 'Intern',
-      evidenceNote: 'Academic work under NDA. Only the broad project area is described publicly.'
+      evidenceNote: 'Academic work under NDA.'
     },
     {
       id: 'edbost',
@@ -63,10 +63,10 @@
       category: 'Inspection Technology',
       certificate: {image: 'iit-bombay-internship-certificate.jpeg'},
       summary: 'Exploring UAV-based crack detection for structural inspection workflows.',
-      description: 'A project focused on detecting cracks using UAV imagery. It connects aerial inspection with software-assisted analysis of visible structural defects.',
+      description: 'Software-assisted analysis of structural defects in aerial imagery.',
       tags: ['UAV inspection', 'Crack detection'],
       role: 'Intern',
-      evidenceNote: 'Academic work under NDA. Only the broad project area is described publicly.'
+      evidenceNote: 'Academic work under NDA.'
     }
   ];
   const assetRoot = new URL('project-images/', document.currentScript.src);
@@ -129,7 +129,7 @@
     if (metadata.childElementCount) overview.append(metadata);
     if (project.evidenceNote) overview.append(el('p', 'portfolio-project-evidence', project.evidenceNote));
     const links = el('div', 'portfolio-project-links');
-    [['View case study', project.caseStudyUrl], ['Live demo', project.demoUrl], ['Source code', project.sourceUrl]].forEach(([label, url]) => {
+    [['View project', project.caseStudyUrl], ['Live demo', project.demoUrl], ['Source code', project.sourceUrl]].forEach(([label, url]) => {
       if (!url) return;
       const link = el('a', '', label);
       link.href = url;

@@ -32,7 +32,7 @@ for (const study of studies) {
   <script src="/theme-sync.js?v=1"></script>
   <script src="/dot-cursor.js?v=1" defer></script>
   <script src="/skills-page.js?v=10" defer></script>
-  <script src="/scroll-text.js?v=1" defer></script>
+  <script src="/scroll-text.js?v=2" defer></script>
 </head>
 <body class="case-page">
   <a class="case-skip" href="#case-content">Skip to case study</a>
@@ -61,11 +61,11 @@ for (const study of studies) {
         <div><h2>My contribution</h2>${paragraphs(study.contribution)}</div>
       </section>
       <section class="case-section" aria-labelledby="workflow-heading">
-        <p class="case-index">02 / Workflow</p><h2 id="workflow-heading">From input to outcome</h2>
+        <p class="case-index">02 / Workflow</p><h2 id="workflow-heading">Workflow</h2>
         <ol class="case-flow" aria-label="High-level workflow">${study.workflow.map(step => `<li><h3>${escape(step.title)}</h3>${paragraphs(step.detail)}</li>`).join('')}</ol>
       </section>
       <section class="case-section" aria-labelledby="architecture-heading">
-        <p class="case-index">03 / Architecture</p><h2 id="architecture-heading">Implementation boundaries</h2>
+        <p class="case-index">03 / Architecture</p><h2 id="architecture-heading">Architecture</h2>
         <div class="case-grid">${cards(study.architecture)}</div>
         <ul class="case-tools" aria-label="Technologies and implementation concepts">${study.tools.map(tool => `<li>${escape(tool)}</li>`).join('')}</ul>
       </section>
@@ -78,8 +78,8 @@ for (const study of studies) {
         ${paragraphs(study.result)}${paragraphs(study.evidence)}
       </section>
       <section class="case-section case-next" aria-labelledby="related-heading">
-        <div><p class="case-index">Connected work</p><h2 id="related-heading">${escape(related.title)}</h2><a href="${related.path}">View related case study <span aria-hidden="true">↗</span></a></div>
-        <a class="case-cta" href="/contact">Discuss an engineering opportunity <span aria-hidden="true">↗</span></a>
+        <div><p class="case-index">Connected work</p><h2 id="related-heading">${escape(related.title)}</h2><a href="${related.path}">View project <span aria-hidden="true">↗</span></a></div>
+        <a class="case-cta" href="/contact">Get in touch <span aria-hidden="true">↗</span></a>
       </section>
     </div>
   </main>

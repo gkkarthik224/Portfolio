@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script data-local-preview>if(location.protocol==='file:')location.replace('http://localhost:8080/portfolio/defect-management');</script>
   <title>Auto Defect Management System | Karthik Krishna</title>
-  <meta name="description" content="An integration workflow that collects automated-test failure evidence, checks existing Jira issues and structures new defect reports.">
+  <meta name="description" content="Collects test failure evidence, checks existing Jira issues, and structures new defect reports.">
   <meta property="og:title" content="Auto Defect Management System | Karthik Krishna">
-  <meta property="og:description" content="An integration workflow that collects automated-test failure evidence, checks existing Jira issues and structures new defect reports.">
+  <meta property="og:description" content="Collects test failure evidence, checks existing Jira issues, and structures new defect reports.">
   <link rel="icon" href="/favicon.svg">
   <link rel="stylesheet" href="/page-motion.css?v=3">
   <link rel="stylesheet" href="/local-customizations.css?v=41">
@@ -32,45 +32,45 @@
       <a class="case-back" href="/portfolio">All projects <span aria-hidden="true">↗</span></a>
       <p class="case-eyebrow">Test automation / Integration engineering</p>
       <h1>Auto Defect Management System</h1>
-      <p class="case-summary">An integration workflow that collects automated-test failure evidence, checks existing Jira issues and structures new defect reports.</p>
+      <p class="case-summary">Collects test failure evidence, checks existing Jira issues, and structures new defect reports.</p>
       <dl class="case-facts">
         <div><dt>Status</dt><dd>Deployed</dd></div>
         <div><dt>Context</dt><dd>Ideabytes · NDA</dd></div>
         <div><dt>My role</dt><dd>Developer · Evidence collection, duplicate checks and logging</dd></div>
       </dl>
-      <p class="case-boundary">Sanitized overview of confidential employer work. Client identities, issue contents, proprietary code and internal test artifacts are omitted.</p>
+      <p class="case-boundary">Employer work under NDA. Client data, code, and internal artifacts are omitted.</p>
     </header>
     <div id="case-content" tabindex="-1">
       
       <section class="case-section case-two-column" aria-labelledby="problem-heading">
-        <div><p class="case-index">01 / Context</p><h2 id="problem-heading">The problem</h2><p>Automated test runs can generate repeated failures that require manual investigation and duplicate bug reports. The system addresses the work between observing a failed test and producing a useful issue for triage.</p></div>
-        <div><h2>My contribution</h2><p>Hands-on development of the evidence collection mechanism, automated duplicate-checking logic, and the script-healing and logging framework connecting the test and issue-management workflows.</p></div>
+        <div><p class="case-index">01 / Context</p><h2 id="problem-heading">The problem</h2><p>Repeated test failures create manual investigation work and duplicate bug reports.</p></div>
+        <div><h2>My contribution</h2><p>Developed evidence collection, duplicate checks, and the healing/logging framework.</p></div>
       </section>
       <section class="case-section" aria-labelledby="workflow-heading">
-        <p class="case-index">02 / Workflow</p><h2 id="workflow-heading">From input to outcome</h2>
+        <p class="case-index">02 / Workflow</p><h2 id="workflow-heading">Workflow</h2>
         <ol class="case-flow" aria-label="High-level workflow"><li><h3>Capture an execution failure</h3><p>Collect failures from Eggplant automation runs.</p></li><li><h3>Gather evidence</h3><p>Collect diagnostic context for the failed execution.</p></li><li><h3>Check existing issues</h3><p>Compare against existing Jira tickets before reporting a new issue.</p></li><li><h3>Structure a new report</h3><p>Format a clean Jira ticket for a genuinely new issue.</p></li></ol>
       </section>
       <section class="case-section" aria-labelledby="architecture-heading">
-        <p class="case-index">03 / Architecture</p><h2 id="architecture-heading">Implementation boundaries</h2>
-        <div class="case-grid"><article class="case-panel"><h3>Test execution boundary</h3><p>Eggplant supplies automated-test execution failures to the integration workflow.</p></article>
-<article class="case-panel"><h3>Evidence and duplicate checks</h3><p>Diagnostic evidence collection and automated checks against existing Jira tickets support the triage workflow. The public summary does not specify the duplicate-matching algorithm.</p></article>
-<article class="case-panel"><h3>Jira logging and issue tracking</h3><p>The system connects automated-test logging with Jira issue tracking.</p></article>
-<article class="case-panel"><h3>Script-maintenance bridge</h3><p>The logging and healing framework connects this workflow to Script Change Management. The two case studies describe distinct responsibilities within the connected work.</p></article></div>
+        <p class="case-index">03 / Architecture</p><h2 id="architecture-heading">Architecture</h2>
+        <div class="case-grid"><article class="case-panel"><h3>Test execution boundary</h3><p>Eggplant supplies automated-test failures.</p></article>
+<article class="case-panel"><h3>Evidence and duplicate checks</h3><p>Collects diagnostics and checks Jira for duplicates. Matching details are confidential.</p></article>
+<article class="case-panel"><h3>Jira logging and issue tracking</h3><p>Connects test logs with Jira issue tracking.</p></article>
+<article class="case-panel"><h3>Script-maintenance bridge</h3><p>Links defect reporting to Script Change Management.</p></article></div>
         <ul class="case-tools" aria-label="Technologies and implementation concepts"><li>PostgreSQL</li><li>Vector DB</li><li>Transformers</li><li>Webhook</li><li>FastAPI</li></ul>
       </section>
       <section class="case-section" aria-labelledby="decisions-heading">
         <p class="case-index">04 / Engineering decisions</p><h2 id="decisions-heading">Controls and trade-offs</h2>
-        <div class="case-decisions"><article class="case-panel"><h3>Check before reporting</h3><p>Existing Jira tickets are checked before a new defect report is created, with the aim of avoiding duplicate issue clutter.</p></article>
-<article class="case-panel"><h3>Collect context at the failure boundary</h3><p>Evidence collection is part of the integration workflow so that new issue reports can carry diagnostic context.</p></article>
-<article class="case-panel"><h3>Connect reporting to script maintenance</h3><p>The healing and logging framework provides a bridge from defect-management work to the connected Script Change Management system.</p></article></div>
+        <div class="case-decisions"><article class="case-panel"><h3>Check before reporting</h3><p>Check Jira before creating a report to reduce duplicates.</p></article>
+<article class="case-panel"><h3>Collect context at the failure boundary</h3><p>Collect diagnostics when a test fails to support triage.</p></article>
+<article class="case-panel"><h3>Connect reporting to script maintenance</h3><p>Feed defect context into the connected script-maintenance workflow.</p></article></div>
       </section>
       <section class="case-section case-result" aria-labelledby="result-heading">
-        <p class="case-index">05 / Status and evidence</p><h2 id="result-heading">Internal-system scope and evidence</h2>
-        <p>A deployed internal integration tool connecting test execution, diagnostic evidence and Jira reporting. The disclosed contribution covers evidence collection, duplicate checks and the healing/logging framework; deployment scale and measured business impact are not included.</p><p>Employer code, ticket examples and test artifacts remain confidential under NDA. The public evidence is this sanitized workflow and contribution summary.</p>
+        <p class="case-index">05 / Status and evidence</p><h2 id="result-heading">Result</h2>
+        <p>Deployed internally to connect test failures, diagnostic evidence, and Jira reporting.</p><p>Deployment scale and measured business impact are not publicly available.</p>
       </section>
       <section class="case-section case-next" aria-labelledby="related-heading">
-        <div><p class="case-index">Connected work</p><h2 id="related-heading">Script Change Management</h2><a href="/portfolio/script-change-management">View related case study <span aria-hidden="true">↗</span></a></div>
-        <a class="case-cta" href="/contact">Discuss an engineering opportunity <span aria-hidden="true">↗</span></a>
+        <div><p class="case-index">Connected work</p><h2 id="related-heading">Script Change Management</h2><a href="/portfolio/script-change-management">View project <span aria-hidden="true">↗</span></a></div>
+        <a class="case-cta" href="/contact">Get in touch <span aria-hidden="true">↗</span></a>
       </section>
     </div>
   </main>
