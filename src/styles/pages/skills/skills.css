@@ -117,14 +117,6 @@ html[data-page-ready] .skills-intro h1 .skills-glow {
 }
 
 .skill-icon-mono { filter: brightness(0); }
-.skills-proof { margin-bottom: 56px; }
-.skills-proof > h2 { margin: 0 0 24px; font-size: clamp(24px, 3vw, 36px); font-weight: 500; line-height: 1.2; letter-spacing: -.035em; }
-.skills-proof-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.skills-proof-grid article { min-width: 0; padding: 24px; border: 1px solid color-mix(in srgb, currentColor 16%, transparent); border-radius: 18px; }
-.skills-proof-grid h3 { margin: 0 0 14px; font-size: 19px; line-height: 1.35; font-weight: 500; }
-.skills-proof-grid p { margin: 0 0 20px; font-size: 14px; line-height: 1.8; }
-.skills-proof-grid a { font-size: 13px; text-decoration: underline; text-underline-offset: 5px; }
-@media (max-width: 899px) { .skills-proof-grid { grid-template-columns: minmax(0, 1fr); } }
 :root[framestack-theme=dark] .skill-icon-mono { filter: brightness(0) invert(1); }
 @media (prefers-color-scheme: dark) {
   :root:not([framestack-theme=light]) .skill-icon-mono { filter: brightness(0) invert(1); }

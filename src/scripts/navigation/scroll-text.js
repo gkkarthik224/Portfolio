@@ -6,7 +6,7 @@
   const blocks = new Map();
   const ownedSelector = [
     '.about-bio', '.about-experience > p',
-    '.skills-main p:not(.page-label)', '.skills-proof h2', '.skills-proof h3',
+    '.skills-main p:not(.page-label)',
     '.skill-row h2', '.skill-tags li > span',
     '.case-main h2', '.case-main h3', '.case-main p:not(.case-index):not(.case-eyebrow)',
     '.contact-details-intro', '.email-draft-note'
