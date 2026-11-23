@@ -130,11 +130,30 @@
     '/portfolio/defect-management', '/home-settled.html', '/about-loaded.html',
     '/portfolio-loaded.html', '/contact-loaded.html', '/project-loaded.html']);
   const routePath = path => path.replace(/\/+$/, '') || '/';
-  window.addEventListener('click', event => {
-    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  function localLink(event) {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const link = event.target instanceof Element && event.target.closest('a[href]');
     if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
     const url = new URL(link.href, location.href);
+    if (url.origin !== location.origin || !routes.has(routePath(url.pathname))) return;
+    return url;
+  }
+  // On iOS, Framer converts link clicks into Motion onTap callbacks. Those
+  // start on pointerdown (or Enter), before our click listener can intervene.
+  // Keep that gesture from starting; preserve the browser's native click,
+  // focus, scrolling and long-press behavior by not preventing the default.
+  window.addEventListener('pointerdown', event => {
+    if (event.button !== 0 || event.isPrimary === false || !localLink(event)) return;
+    event.stopImmediatePropagation();
+  }, true);
+  window.addEventListener('keydown', event => {
+    if (event.key !== 'Enter' || !localLink(event)) return;
+    event.stopImmediatePropagation();
+  }, true);
+  window.addEventListener('click', event => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const url = localLink(event);
+    if (!url) return;
     const path = routePath(url.pathname);
     const samePage = path === routePath(location.pathname);
     if (url.origin === location.origin && samePage && url.hash && scroller) {
@@ -149,8 +168,9 @@
     }
     // Framer also emits directory URLs on mobile. Every spelling of a local
     // route must load its document, otherwise its router restores the old UI.
-    if (url.origin !== location.origin || !routes.has(path) || (samePage && url.hash) || url.href === location.href) return;
+    if (samePage && url.hash) return;
     event.preventDefault(); event.stopImmediatePropagation();
+    if (url.href === location.href) return;
     if (leaving) return;
     leaving = true;
     const menuDuration = window.PortfolioMenu?.select(path) || 0;

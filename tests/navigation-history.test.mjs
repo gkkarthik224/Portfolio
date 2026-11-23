@@ -83,10 +83,45 @@ function page({reducedMotion = false, pathname = '/portfolio/'} = {}) {
     await setImmediate();
     advance(180);
   };
-  return {root, main, window, animations, navigations, advance, click, leave,
+  const gesture = (type, options = {}) => {
+    const link = new Element();
+    link.href = options.href ?? 'https://portfolio.invalid/portfolio/';
+    link.target = options.target;
+    if (options.download) link.setAttribute('download', '');
+    const event = {button: 0, key: 'Enter', ...options, target: link,
+      stopped: false, defaultPrevented: false,
+      stopImmediatePropagation() { this.stopped = true; },
+      preventDefault() { this.defaultPrevented = true; }};
+    emit('window', type, event);
+    return event;
+  };
+  return {root, main, window, animations, navigations, advance, click, leave, gesture,
     hide: () => emit('window', 'pagehide', {persisted: true}),
     show: persisted => emit('window', 'pageshow', {persisted})};
 }
+
+test('local links block Framer tap initialization without cancelling native behavior', () => {
+  for (const type of ['pointerdown', 'keydown']) {
+    const view = page({pathname: '/'});
+    const event = view.gesture(type);
+    assert.equal(event.stopped, true);
+    assert.equal(event.defaultPrevented, false);
+    view.advance(180);
+    assert.equal(view.navigations.length, 0, 'Touch-down must not navigate or turn scrolling into a tap');
+    view.click('https://portfolio.invalid/portfolio/');
+    view.advance(180);
+    assert.deepEqual(view.navigations, ['https://portfolio.invalid/portfolio/']);
+  }
+});
+
+test('external links, downloads, new tabs and modified gestures remain native', () => {
+  const view = page();
+  for (const options of [{href: 'https://example.com/'}, {download: true}, {target: '_blank'},
+    {ctrlKey: true}, {metaKey: true}, {button: 1}, {isPrimary: false}]) {
+    assert.equal(view.gesture('pointerdown', options).stopped, false);
+  }
+  assert.equal(view.gesture('keydown', {key: 'Tab'}).stopped, false);
+});
 
 test('pagehide removes a completed exit fade before the history snapshot', async () => {
   const view = page();
