@@ -129,12 +129,15 @@
     '/portfolio/travel-easy', '/portfolio/script-change-management', '/portfolio/procurement-erp',
     '/portfolio/defect-management', '/home-settled.html', '/about-loaded.html',
     '/portfolio-loaded.html', '/contact-loaded.html', '/project-loaded.html']);
+  const routePath = path => path.replace(/\/+$/, '') || '/';
   window.addEventListener('click', event => {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const link = event.target instanceof Element && event.target.closest('a[href]');
     if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
     const url = new URL(link.href, location.href);
-    if (url.origin === location.origin && url.pathname === location.pathname && url.hash && scroller) {
+    const path = routePath(url.pathname);
+    const samePage = path === routePath(location.pathname);
+    if (url.origin === location.origin && samePage && url.hash && scroller) {
       let target;
       try { target = document.getElementById(decodeURIComponent(url.hash.slice(1))); } catch {}
       if (!target) return;
@@ -144,11 +147,13 @@
       target.focus({preventScroll: true});
       return;
     }
-    if (url.origin !== location.origin || !routes.has(url.pathname) || url.hash || url.href === location.href) return;
+    // Framer also emits directory URLs on mobile. Every spelling of a local
+    // route must load its document, otherwise its router restores the old UI.
+    if (url.origin !== location.origin || !routes.has(path) || (samePage && url.hash) || url.href === location.href) return;
     event.preventDefault(); event.stopImmediatePropagation();
     if (leaving) return;
     leaving = true;
-    const menuDuration = window.PortfolioMenu?.select(url.pathname) || 0;
+    const menuDuration = window.PortfolioMenu?.select(path) || 0;
     try { sessionStorage.setItem('portfolio-navigation', '1'); } catch {}
     if (preference.matches) { location.assign(url.href); return; }
     root.setAttribute('data-page-leaving', '');

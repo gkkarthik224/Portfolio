@@ -6,7 +6,7 @@ import vm from 'node:vm';
 
 const source = await readFile(new URL('../src/scripts/navigation/page-transitions.js', import.meta.url), 'utf8');
 
-function page({reducedMotion = false} = {}) {
+function page({reducedMotion = false, pathname = '/portfolio/'} = {}) {
   const listeners = {window: new Map(), document: new Map()};
   const timers = new Map(), animations = [], navigations = [];
   let timerId = 0;
@@ -48,8 +48,8 @@ function page({reducedMotion = false} = {}) {
   }
   const root = new Element(), main = new Element(), body = new Element();
   const location = {
-    origin: 'https://portfolio.invalid', pathname: '/portfolio/',
-    href: 'https://portfolio.invalid/portfolio/', assign: url => navigations.push(url)
+    origin: 'https://portfolio.invalid', pathname,
+    href: `https://portfolio.invalid${pathname}`, assign: url => navigations.push(url)
   };
   const window = {addEventListener: on('window'), dispatchEvent: event => emit('window', event.type, event)};
   const document = {
@@ -70,9 +70,9 @@ function page({reducedMotion = false} = {}) {
     }
   };
   advance(2400);
-  const click = () => {
+  const click = (href = 'https://portfolio.invalid/about') => {
     const link = new Element();
-    link.href = 'https://portfolio.invalid/about';
+    link.href = href;
     emit('window', 'click', {target: link, button: 0, preventDefault() {}, stopImmediatePropagation() {}});
   };
   const leave = async () => {
@@ -95,6 +95,23 @@ test('pagehide removes a completed exit fade before the history snapshot', async
   view.hide();
   assert.equal(view.main.opacity, 1, 'A cached page must not retain the invisible exit frame');
   assert.equal(view.root.hasAttribute('data-page-leaving'), false);
+});
+
+test('directory routes and cross-page fragments use document navigation', () => {
+  for (const path of ['/about/', '/about/#experience', '/portfolio/', '/skills/?from=menu']) {
+    const view = page({pathname: '/'});
+    const href = `https://portfolio.invalid${path}`;
+    view.click(href);
+    view.advance(180);
+    assert.deepEqual(view.navigations, [href], path);
+  }
+});
+
+test('same-page fragments retain native anchor navigation', () => {
+  const view = page();
+  view.click('https://portfolio.invalid/portfolio/#portfolio-projects');
+  view.advance(180);
+  assert.equal(view.navigations.length, 0);
 });
 
 test('Back restores visibility even after the finished animation left the active set', async () => {
